@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Hub - Ultimate Guides & Resources</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary: #4CAF50;
+            --secondary: #8BC34A;
+            --accent: #FF9800;
+            --dark: #2E7D32;
+            --darker: #1B5E20;
+            --light: #C8E6C9;
+            --text: #212121;
+            --text-light: #757575;
+            --background: #F1F8E9;
+            --card-bg: #FFFFFF;
+            --header-bg: rgba(43, 99, 46, 0.95);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%234CAF50" opacity="0.1" x="0" y="0" width="100" height="100"/><path fill="%234CAF50" opacity="0.05" d="M0 0h100v100H0zM50 50L0 0l50 50zm0 0l50 50-50-50zm0 0l50-50-50 50zm0 0L0 50l50-50z"/></svg>');
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background: var(--header-bg);
+            color: white;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .logo i {
+            color: var(--accent);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+            background: transparent;
+        }
+
+        .btn-outline:hover {
+            background: white;
+            color: var(--primary);
+        }
+
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+            border: 2px solid var(--accent);
+        }
+
+        .btn-primary:hover {
+            background: transparent;
+            color: var(--accent);
+        }
+
+        .btn-small {
+            padding: 8px 16px;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23ffffff" opacity="0.1" x="0" y="0" width="25" height="25"/><rect fill="%23ffffff" opacity="0.1" x="50" y="0" width="25" height="25"/><rect fill="%23ffffff" opacity="0.1" x="25" y="25" width="25" height="25"/><rect fill="%23ffffff" opacity="0.1" x="75" y="25" width="25" height="25"/><rect fill="%23ffffff" opacity="0.1" x="0" y="50" width="25" height="25"/><rect fill="%23ffffff" opacity="0.1" x="50" y="50" width="25" height="25"/><rect fill="%23ffffff" opacity="0.1" x="25" y="75" width="25" height="25"/><rect fill="%23ffffff" opacity="0.1" x="75" y="75" width="25" height="25"/></svg>');
+            background-size: 100px;
+            opacity: 0.2;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .search-bar {
+            display: flex;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 50px 0 0 50px;
+            font-size: 1rem;
+        }
+
+        .search-bar button {
+            padding: 15px 25px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 0 50px 50px 0;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        /* Section Styles */
+        section {
+            padding: 70px 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--dark);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent);
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Card Styles */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-img {
+            height: 180px;
+            background: linear-gradient(45deg, var(--primary), var(--secondary));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .card-content {
+            padding: 25px;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+
+        .card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+            margin-top: 20px;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tab-btn {
+            padding: 12px 25px;
+            background: #e8f5e9;
+            color: var(--dark);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Version Boxes */
+        .version-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .version-box {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .version-box:hover {
+            transform: translateY(-3px);
+        }
+
+        .version-box h4 {
+            color: var(--dark);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .version-box ul {
+            list-style: none;
+            text-align: left;
+        }
+
+        .version-box li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .version-box li:last-child {
+            border-bottom: none;
+        }
+
+        .version-box a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        .version-box a:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        /* Table Styles */
+        .downloads-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .downloads-table th, .downloads-table td {
+            padding: 15px 20px;
+            text-align: left;
+        }
+
+        .downloads-table th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        .downloads-table tr:nth-child(even) {
+            background: #f5f5f5;
+        }
+
+        .downloads-table a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .downloads-table a:hover {
+            text-decoration: underline;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-light);
+            z-index: 10;
+        }
+
+        .strategy-content {
+            line-height: 1.6;
+        }
+
+        .strategy-content h2 {
+            color: var(--dark);
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+        }
+
+        .strategy-content h3 {
+            color: var(--primary);
+            margin: 20px 0 10px;
+        }
+
+        .strategy-content ul, .strategy-content ol {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        .strategy-content li {
+            margin-bottom: 8px;
+        }
+
+        .strategy-content .tip {
+            background: #E8F5E9;
+            padding: 15px;
+            border-left: 4px solid var(--primary);
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .form-group input:focus {
+            border-color: var(--primary);
+            outline: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            color: white;
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: var(--accent);
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column a:hover {
+            color: var(--accent);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: all 0.3s;
+        }
+
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 15px 25px;
+            background: var(--primary);
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            nav ul {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hero {
+                padding: 60px 0;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .search-bar {
+                flex-direction: column;
+            }
+            
+            .search-bar input {
+                border-radius: 50px;
+                margin-bottom: 10px;
+            }
+            
+            .search-bar button {
+                border-radius: 50px;
+            }
+            
+            .tabs {
+                flex-direction: column;
+            }
+            
+            .modal-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo" id="logo">
+                <i class="fas fa-cube"></i>
+                <span>Minecraft Hub</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#guides">Guides</a></li>
+                    <li><a href="#bedwars">BedWars</a></li>
+                    <li><a href="#packs">Texture Packs</a></li>
+                    <li><a href="#mods">Mods</a></li>
+                    <li><a href="#community">Community</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <h1>Ultimate Minecraft Resources Hub</h1>
+            <p>Your one-stop destination for guides, texture packs, mods, and BedWars strategies for all Minecraft versions</p>
+        </div>
+    </section>
+
+    <!-- Guides Section -->
+    <section id="guides">
+        <div class="container">
+            <div class="section-header">
+                <h2>Guides & Tutorials</h2>
+                <p>Master Minecraft with our comprehensive guides for beginners and advanced players</p>
+            </div>
+
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="beginner">Beginner</button>
+            </div>
+
+            <div class="tab-content active" id="beginner-tab">
+                <div class="card-grid">
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-moon"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Surviving Your First Night</h3>
+                            <p>Complete step-by-step guide to survive your first night in Minecraft without dying.</p>
+                            <button class="btn btn-primary" onclick="showGuide('first-night')">Read Guide</button>
+                            <div class="card-meta">
+                                <span><i class="fas fa-clock"></i> 15 min read</span>
+                                <span><i class="fas fa-download"></i> 2.4k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Complete Crafting Guide</h3>
+                            <p>Learn all essential crafting recipes and how to build your first tools and shelter.</p>
+                            <button class="btn btn-primary" onclick="showGuide('crafting')">Read Guide</button>
+                            <div class="card-meta">
+                                <span><i class="fas fa-clock"></i> 25 min read</span>
+                                <span><i class="fas fa-download"></i> 3.1k</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-img">
+                            <i class="fas fa-dragon"></i>
+                        </div>
+                        <div class="card-content">
+                            <h3>Ender Dragon Battle</h3>
+                            <p>Strategies and preparation needed to defeat the Ender Dragon for the first time.</p>
+                            <button class="btn btn-primary" onclick="showGuide('ender-dragon')">Read Guide</button>
+                            <div class="card-meta">
+                                <span><i class="fas fa-clock"></i> 20 min read</span>
+                                <span><i class="fas fa-download"></i> 1.9k</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BedWars Section -->
+    <section id="bedwars" style="background: #E8F5E9;">
+        <div class="container">
+            <div class="section-header">
+                <h2>BedWars Strategies</h2>
+                <p>Master the popular BedWars minigame with version-specific strategies and tips</p>
+            </div>
+
+            <div class="version-grid">
+                <div class="version-box">
+                    <h4>Version 1.8.9</h4>
+                    <ul>
+                        <li><a onclick="showStrategy('189rush')">Best rushing strategies</a></li>
+                        <li><a onclick="showStrategy('189resource')">Optimal resource collection</a></li>
+                        <li><a onclick="showStrategy('189pvp')">PvP techniques</a></li>
+                        <li><a onclick="showStrategy('189bridge')">Bridge fighting tips</a></li>
+                        <li><a onclick="showStrategy('189defense')">Defensive tactics</a></li>
+                    </ul>
+                </div>
+
+                <div class="version-box">
+                    <h4>Version 1.16.5</h4>
+                    <ul>
+                        <li><a onclick="showStrategy('1165combat')">New combat mechanics</a></li>
+                        <li><a onclick="showStrategy('1165netherite')">Netherite strategies</a></li>
+                        <li><a onclick="showStrategy('1165crossbow')">Crossbow tactics</a></li>
+                        <li><a onclick="showStrategy('1165bastion')">Bastion loot routes</a></li>
+                        <li><a onclick="showStrategy('1165team')">Team coordination</a></li>
+                    </ul>
+                </div>
+
+                <div class="version-box">
+                    <h4>Version 1.12.2</h4>
+                    <ul>
+                        <li><a onclick="showStrategy('1122offhand')">Off-hand strategies</a></li>
+                        <li><a onclick="showStrategy('1122sweeping')">Sweeping edge techniques</a></li>
+                        <li><a onclick="showStrategy('1122totem')">Totem of undying uses</a></li>
+                        <li><a onclick="showStrategy('1122elytra')">Elytra maneuvers</a></li>
+                        <li><a onclick="showStrategy('1122shulker')">Shulker box tactics</a></li>
+                    </ul>
+                </div>
+
+                <div class="version-box">
+                    <h4>General Strategies</h4>
+                    <ul>
+                        <li><a onclick="showStrategy('map-awareness')">Map awareness</a></li>
+                        <li><a onclick="showStrategy('resource-mgmt')">Resource management</a></li>
+                        <li><a onclick="showStrategy('communication')">Communication tips</a></li>
+                        <li><a onclick="showStrategy('bed-defense')">Bed defense ideas</a></li>
+                        <li><a onclick="showStrategy('final-fight')">Final fight techniques</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Texture Packs Section -->
+    <section id="packs">
+        <div class="container">
+            <div class="section-header">
+                <h2>Texture Packs</h2>
+                <p>Download the best texture packs for various Minecraft versions</p>
+            </div>
+
+            <table class="downloads-table">
+                <thead>
+                    <tr>
+                        <th>Pack Name</th>
+                        <th>Version</th>
+                        <th>Style</th>
+                        <th>Description</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Texture Pack FOLDER</td>
+                        <td>1.8.9</td>
+                        <td>PvP - FPS Boost</td>
+                        <td>Everything You Need</td>
+                        <td><a href="https://download2284.mediafire.com/7t4gd33m59kgOuoWiqGQLwfUW5pvc0-fZuTWPp-2tOkH2qdQzE7Ms-94T-fLue9OA19S-TNwt5fZMVLALzWqBHpdFHdtwrDTVgytNfRoPN7bVcuLsc2lBhCUVfR2IPMw-mORWFg52kU3DqTS7rdaRYe9Z_DORbh5xRSgDx1VQFbmqV0v/21cbjmtlv7rbeow/secondslol+pack+folder.zip" onclick="downloadPack('faithful32x')">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Dewier's 60k Texture Pack</td>
+                        <td>1.8.9</td>
+                        <td>PvP Optimized</td>
+                        <td>Ultimate PvP Texture Pack</td>
+                        <td><a href="https://www.mediafire.com/file/pvgancjgakrjxtl/%21_%C2%A75Dewier_%C2%A77%5B%C2%A7660k%C2%A77%5D.zip/file" onclick="downloadPack('defaultedit')">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>NotNico's 150k Pack</td>
+                        <td>1.8.9</td>
+                        <td>Hacker</td>
+                        <td>My Personnal Favorite Pack</td>
+                        <td><a href="https://www.mediafire.com/file/1bx0p423evr1uf3/Super_E%252B.zip/file" onclick="downloadPack('lunar')">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Bedless Noob's 300k Pack</td>
+                        <td>1.8.9</td>
+                        <td>Easy to Win</td>
+                        <td>Smooth and clean textures with a cohesive look</td>
+                        <td><a href="https://www.mediafire.com/file/titkjvmy5z3k3f9/!+++++++++++++++%C2%A7dBedless+Noob+%C2%A7b300k+" onclick="downloadPack('soartex')">Download</a></td>
+                    </tr>
+                    <tr>
+                        <td>Ramye 16x</td>
+                        <td>1.21</td>
+                        <td>smooth and clean</td>
+                        <td>the best 16x Bedwars, PvP, and Crystal PvP texture pack for Minecraft 1.21</td>
+                        <td><a href="https://www.mediafire.com/file/cgi31mjuxjm81f3/!+%C3%82%C2%A72Ramye+%C3%82%C2%A7716x+%C3%82%C2%A76" onclick="downloadPack('bdcraft')">Download</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Mods Section -->
+    <section id="mods" style="background: #E8F5E9;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Mods</h2>
+                <p>Enhance your Minecraft experience with these amazing mods</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-img">
+                        <i class="fas fa-puzzle-piece"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Reverie</h3>
+                        <p>Shader with a foggy and warm look. It leverages new features added by Iris for effects previously impossible to achieve.</p>
+                        <button class="btn btn-primary" onclick="window.open('https://modrinth.com/shader/reverie_shader/version/0.3')">Download</button>
+                        <div class="card-meta">
+                            <span><i class="fas fa-download"></i> 10.2M</span>
+                            <span><i class="fas fa-star"></i> 4.9/5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">
+                        <i class="fas fa-tree"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Biomes O' Plenty</h3>
+                        <p>Adds dozens of new biomes to explore in your world</p>
+                        <button class="btn btn-primary" onclick="window.open('https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty')">Download</button>
+                        <div class="card-meta">
+                            <span><i class="fas fa-download"></i> 5.7M</span>
+                            <span><i class="fas fa-star"></i> 4.8/5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Create Mod</h3>
+                        <p>Adds steam-powered machinery and moving contraptions</p>
+                        <button class="btn btn-primary" onclick="window.open('https://www.curseforge.com/minecraft/mc-mods/create')">Download</button>
+                        <div class="card-meta">
+                            <span><i class="fas fa-download"></i> 3.2M</span>
+                            <span><i class="fas fa-star"></i> 4.9/5</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community">
+        <div class="container">
+            <div class="section-header">
+                <h2>Community</h2>
+                <p>Join our growing community of Minecraft enthusiasts</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-img">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Forums</h3>
+                        <p>Discuss strategies, share builds, and get help from other players</p>
+                        <button class="btn btn-primary" onclick="showNotification('Our forums are currently being set up! Please join our Discord server for now to discuss strategies and share builds.')">Visit Forums</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Discord Server</h3>
+                        <p>Join our Discord community for real-time chat and events</p>
+                        <button class="btn btn-primary" onclick="window.open('https://discord.gg/vCfkTBBy')">Join Discord</button>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-img">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Gallery</h3>
+                        <p>Show off your builds and explore creations from others</p>
+                        <button class="btn btn-primary" onclick="showNotification('All our community builds and pictures are shared in our Discord server! Join our Discord to view and share creations.')">View Gallery</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Minecraft Hub</h3>
+                    <p>Your ultimate resource for Minecraft guides, texture packs, mods, and BedWars strategies.</p>
+                    <div class="social-links">
+                        <a href="https://discord.gg/vCfkTBBy"><i class="fab fa-discord"></i></a>
+                        <a href="https://youtube.com/@redeexzy?si=UW1wLJjdHMDHK35O"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#guides">Guides</a></li>
+                        <li><a href="#bedwars">BedWars</a></li>
+                        <li><a href="#packs">Texture Packs</a></li>
+                        <li><a href="#mods">Mods</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="https://www.minecraft.net" target="_blank">Minecraft Official Site</a></li>
+                        <li><a href="https://minecraft.fandom.com" target="_blank">Minecraft Wiki</a></li>
+                        <li><a href="https://hypixel.net" target="_blank">Hypixel Server</a></li>
+                        <li><a href="https://www.curseforge.com" target="_blank">CurseForge</a></li>
+                        <li><a href="https://www.planetminecraft.com" target="_blank">Planet Minecraft</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#" onclick="showLegal('terms')">Terms of Service</a></li>
+                        <li><a href="#" onclick="showLegal('privacy')">Privacy Policy</a></li>
+                        <li><a href="#" onclick="showLegal('cookies')">Cookie Policy</a></li>
+                        <li><a href="#" onclick="showLegal('disclaimer')">Disclaimer</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>© 2025 Minecraft Hub. This is a fan-made website. Not affiliated with Mojang or Microsoft.</p>
+                <p>Minecraft is a trademark of Mojang Studios. All other trademarks are property of their respective owners. created by Redeex</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Strategy Modal -->
+    <div class="modal" id="strategyModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('strategyModal')">&times;</span>
+            <div id="strategyContent" class="strategy-content"></div>
+        </div>
+    </div>
+
+    <!-- Guide Modal -->
+    <div class="modal" id="guideModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('guideModal')">&times;</span>
+            <div id="guideContent"></div>
+        </div>
+    </div>
+
+    <!-- Legal Modal -->
+    <div class="modal" id="legalModal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal('legalModal')">&times;</span>
+            <div id="legalContent"></div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <span id="notificationText"></span>
+    </div>
+
+    <script>
+        // Modal functionality
+        function showModal(modalId) {
+            document.getElementById(modalId).style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Show strategy content
+        function showStrategy(strategyId) {
+            const strategyContent = document.getElementById('strategyContent');
+            
+            // Strategy content for each strategy
+            const strategies = {
+                // Version 1.8.9 strategies
+                '189rush': `
+                    <h2>Best Rushing Strategies for 1.8.9</h2>
+                    <p>Rushing is a critical strategy in BedWars that can give you an early advantage. Here are the most effective rushing techniques for Minecraft 1.8.9:</p>
+                    
+                    <h3>Fast Iron Rush</h3>
+                    <p>This is the most common rushing strategy in 1.8.9:</p>
+                    <ol>
+                        <li>Collect 4 iron from your generator immediately</li>
+                        <li>Buy 32 blocks (usually wool)</li>
+                        <li>Rush to the nearest island without gathering more resources</li>
+                        <li>Break their bed quickly before they have time to set up defenses</li>
+                    </ol>
+                    
+                    <h3>Side Rush Technique</h3>
+                    <p>Instead of rushing directly, try this approach:</p>
+                    <ul>
+                        <li>Build to the side of the island instead of directly toward it</li>
+                        <li>Come in from an unexpected angle</li>
+                        <li>This avoids direct confrontation and gives you element of surprise</li>
+                    </ul>
+                    
+                    <div class="tip">
+                        <strong>Pro Tip:</strong> In 1.8.9, practice your bridge fighting skills as this version has unique combat mechanics that favor quick, precise movements.
+                    </div>
+                `,
+                '189resource': `
+                    <h2>Optimal Resource Collection in 1.8.9</h2>
+                    <p>Efficient resource management is key to dominating in BedWars. Here's how to optimize your resource collection in version 1.8.9:</p>
+                    
+                    <h3>Generator Prioritization</h3>
+                    <ul>
+                        <li>Always upgrade your iron generator first - it's the most important</li>
+                        <li>Time your visits to generators to maximize collection</li>
+                        <li>Don't wait for generators to fill completely - frequent small collections are better</li>
+                    </ul>
+                    
+                    <h3>Diamond Control</h3>
+                    <p>Controlling the diamond generators is crucial:</p>
+                    <ol>
+                        <li>Rush to mid early to secure diamond generators</li>
+                        <li>Prioritize armor and sharpness upgrades</li>
+                        <li>Set up traps and defenses around diamond generators you control</li>
+                    </ol>
+                    
+                    <h3>Emerald Strategies</h3>
+                    <p>Emeralds are powerful but risky to obtain:</p>
+                    <ul>
+                        <li>Only go for emeralds when you have a secure base</li>
+                        <li>Prioritize obsidian and powerful items like bridge eggs</li>
+                        <li>Consider getting invisibility potions for surprise attacks</li>
+                    </ul>
+                `,
+                '189pvp': `
+                    <h2>PvP Techniques for 1.8.9</h2>
+                    <p>Version 1.8.9 has unique combat mechanics that require specific techniques to master:</p>
+                    
+                    <h3>Click Timing</h3>
+                    <p>In 1.8.9, how you click matters:</p>
+                    <ul>
+                        <li>Aim for 6-8 CPS (clicks per second) for optimal damage</li>
+                        <li>Butterfly clicking and jitter clicking are popular techniques</li>
+                        <li>Focus on accuracy over speed - well-placed hits matter more</li>
+                    </ul>
+                    
+                    <h3>Strafe Patterns</h3>
+                    <p>Movement is crucial in 1.8.9 PvP:</p>
+                    <ol>
+                        <li>Practice A-D strafing (alternating between A and D keys)</li>
+                        <li>Incorporate crouching to throw off your opponent's aim</li>
+                        <li>Use sprint resetting to maintain combos</li>
+                    </ol>
+                    
+                    <h3>Rod and Bow Usage</h3>
+                    <p>Ranged weapons can give you an advantage:</p>
+                    <ul>
+                        <li>Use fishing rods to create distance and start combos</li>
+                        <li>Practice bow shots from various distances</li>
+                        <li>Learn to quick-swap between sword and rod</li>
+                    </ul>
+                    
+                    <div class="tip">
+                        <strong>Pro Tip:</strong> In 1.8.9, blockhitting (right-clicking with a sword) can reduce damage taken and help you win close-quarters fights.
+                    </div>
+                `,
+                '189bridge': `
+                    <h2>Bridge Fighting Tips for 1.8.9</h2>
+                    <p>Bridge fights are common in BedWars and mastering them can give you a significant advantage:</p>
+                    
+                    <h3>Block Placement Techniques</h3>
+                    <p>How you place blocks matters:</p>
+                    <ul>
+                        <li>Practice speed bridging to cross gaps quickly</li>
+                        <li>Learn to place blocks while looking down to create cover</li>
+                        <li>Use stair bridging for faster forward movement</li>
+                    </ul>
+                    
+                    <h3>Defensive Bridging</h3>
+                    <p>When being chased on a bridge:</p>
+                    <ol>
+                        <li>Place blocks behind you to slow pursuers</li>
+                        <li>Create turns in your bridge to break line of sight</li>
+                        <li>Use ender pearls or leap potions to escape if available</li>
+                    </ol>
+                    
+                    <h3>Offensive Bridge Fighting</h3>
+                    <p>When attacking someone on a bridge:</p>
+                    <ul>
+                        <li>Try to knock them off with well-timed hits</li>
+                        <li>Use projectiles like fireballs or eggs to disrupt their bridging</li>
+                        <li>Break blocks underneath them if possible</li>
+                    </ul>
+                `,
+                '189defense': `
+                    <h2>Defensive Tactics for 1.8.9</h2>
+                    <p>A strong defense is just as important as a good offense in BedWars:</p>
+                    
+                    <h3>Bed Defense Strategies</h3>
+                    <p>Protecting your bed should be a priority:</p>
+                    <ul>
+                        <li>Use end stone as it's blast-resistant and takes longer to break</li>
+                        <li>Create layered defenses with multiple materials</li>
+                        <li>Leave small gaps to attack rushers while maintaining cover</li>
+                    </ul>
+                    
+                    <h3>Trap Strategies</h3>
+                    <p>Traps can catch opponents off guard:</p>
+                    <ol>
+                        <li>Miner fatigue trap is essential for early game</li>
+                        <li>Alarm trap can reveal invisible players</li>
+                        <li>Counter-offensive trap gives strength when your bed is broken</li>
+                    </ol>
+                    
+                    <h3>Base Layout</h3>
+                    <p>How you design your base matters:</p>
+                    <ul>
+                        <li>Create multiple layers of defense</li>
+                        <li>Build platforms around your base for better visibility</li>
+                        <li>Consider building a roof to protect from aerial attacks</li>
+                    </ul>
+                `,
+                
+                // Version 1.16.5 strategies
+                '1165combat': `
+                    <h2>New Combat Mechanics in 1.16.5</h2>
+                    <p>Version 1.16.5 introduced significant changes to Minecraft's combat system that affect BedWars strategies:</p>
+                    
+                    <h3>Attack Cooldown</h3>
+                    <p>The most significant change is the attack cooldown:</p>
+                    <ul>
+                        <li>Weapons now have a cooldown period between attacks</li>
+                        <li>Timing your attacks is more important than spamming clicks</li>
+                        <li>Different weapons have different cooldown times</li>
+                    </ul>
+                    
+                    <h3>Weapon Choices</h3>
+                    <p>Weapon selection matters more in 1.16.5:</p>
+                    <ol>
+                        <li>Axes now do more damage but have longer cooldowns</li>
+                        <li>Swords have faster cooldowns but less damage per hit</li>
+                        <li>Consider carrying multiple weapons for different situations</li>
+                    </ol>
+                    
+                    <h3>Shield Mechanics</h3>
+                    <p>Shields are more important in this version:</p>
+                    <ul>
+                        <li>Shields can block attacks but have a brief cooldown after use</li>
+                        <li>Axes can disable shields temporarily</li>
+                        <li>Learn to time your shield usage for maximum effectiveness</li>
+                    </ul>
+                    
+                    <div class="tip">
+                        <strong>Pro Tip:</strong> In 1.16.5, practice timing your attacks rather than clicking rapidly. Wait for the cooldown indicator to fill completely for maximum damage.
+                    </div>
+                `,
+                '1165netherite': `
+                    <h2>Netherite Strategies for 1.16.5</h2>
+                    <p>Netherite is a powerful new material introduced in 1.16 that can give you a significant advantage:</p>
+                    
+                    <h3>Obtaining Netherite</h3>
+                    <p>Getting Netherite requires specific steps:</p>
+                    <ul>
+                        <li>You need to find Ancient Debris in the Nether</li>
+                        <li>Smelt Ancient Debris to get Netherite Scrap</li>
+                        <li>Combine 4 Netherite Scrap with 4 Gold Ingots to make Netherite Ingot</li>
+                    </ul>
+                    
+                    <h3>Netherite Gear Advantages</h3>
+                    <p>Netherite equipment has several benefits:</p>
+                    <ol>
+                        <li>Higher durability than diamond gear</li>
+                        <li>Better enchantability</li>
+                        <li>Items float in lava instead of burning</li>
+                        <li>Knockback resistance</li>
+                    </ol>
+                    
+                    <h3>Strategic Uses</h3>
+                    <p>How to best utilize Netherite:</p>
+                    <ul>
+                        <li>Prioritize Netherite weapons over armor for damage output</li>
+                        <li>Consider Netherite boots for knockback resistance in bridge fights</li>
+                        <li>Use Netherite tools for faster resource gathering</li>
+                    </ul>
+                `,
+                '1165crossbow': `
+                    <h2>Crossbow Tactics for 1.16.5</h2>
+                    <p>Crossbows are powerful ranged weapons that can be game-changers in BedWars:</p>
+                    
+                    <h3>Crossbow vs Bow</h3>
+                    <p>Understanding the differences:</p>
+                    <ul>
+                        <li>Crossbows have longer range but slower reload time</li>
+                        <li>Crossbows can be pre-loaded and fired instantly</li>
+                        <li>Multishot and piercing enchantments are unique to crossbows</li>
+                    </ul>
+                    
+                    <h3>Effective Crossbow Use</h3>
+                    <p>Strategies for maximizing crossbow effectiveness:</p>
+                    <ol>
+                        <li>Pre-load crossbows before engaging in combat</li>
+                        <li>Use multishot for area denial or against multiple opponents</li>
+                        <li>Piercing arrows can hit through multiple enemies</li>
+                    </ol>
+                    
+                    <h3>Special Arrow Types</h3>
+                    <p>Different arrows have different effects:</p>
+                    <ul>
+                        <li>Spectator arrows reveal enemy positions</li>
+                        <li>Tipped arrows with status effects can turn the tide of battle</li>
+                        <li>Rocket arrows (with fireworks) deal area damage</li>
+                    </ul>
+                `, 
+                '1165bastion': `
+                    <h2>Bastion Loot Routes for 1.16.5</h2>
+                    <p>Bastions are structures in the Nether that contain valuable loot but are heavily guarded:</p>
+                    
+                    <h3>Bastion Types</h3>
+                    <p>There are four types of bastions with different loot:</p>
+                    <ul>
+                        <li>Housing Units: Contain gold blocks and piglin housing</li>
+                        <li>Treasure Rooms: Most valuable loot but heavily guarded</li>
+                        <li>Bridge: Connects different parts of the bastion</li>
+                        <li>Stables: Where piglins keep their hoglins</li>
+                    </ul>
+                    
+                    <h3>Looting Strategies</h3>
+                    <p>How to safely loot a bastion:</p>
+                    <ol>
+                        <li>Wear gold armor to avoid piglin aggression</li>
+                        <li>Bring plenty of blocks to navigate and create barriers</li>
+                        <li>Focus on treasure rooms for the most valuable items</li>
+                        <li>Be prepared to fight piglin brutes - they're hostile even with gold armor</li>
+                    </ol>
+                    
+                    <h3>Valuable Loot</h3>
+                    <p>What to look for in bastions:</p>
+                    <ul>
+                        <li>Netherite ingots and ancient debris</li>
+                        <li>Diamond gear and enchantment books</li>
+                        <li>Gold blocks and ingots</li>
+                        <li>Unique music discs and other rare items</li>
+                    </ul>
+                `,
+                '1165team': `
+                    <h2>Team Coordination in 1.16.5</h2>
+                    <p>Effective team coordination is more important than ever in version 1.16.5:</p>
+                    
+                    <h3>Role Specialization</h3>
+                    <p>Assign specific roles to team members:</p>
+                    <ul>
+                        <li>Rusher: Focuses on attacking other teams early</li>
+                        <li>Base Defender: Stays to protect the bed and gather resources</li>
+                        <li>Mid Controller: Focuses on controlling diamond and emerald generators</li>
+                        <li>Support: Helps teammates with resources and backup</li>
+                    </ul>
+                    
+                    <h3>Communication Strategies</h3>
+                    <p>How to communicate effectively with your team:</p>
+                    <ol>
+                        <li>Use quick chat messages for common situations</li>
+                        <li>Call out enemy positions and movements</li>
+                        <li>Coordinate attacks on specific teams</li>
+                        <li>Share resources based on who needs them most</li>
+                    </ol>
+                    
+                    <h3>Advanced Team Tactics</h3>
+                    <p>Strategies for coordinated team play:</p>
+                    <ul>
+                        <li>Simultaneous attacks from multiple angles</li>
+                        <li>Bait and switch tactics to distract enemies</li>
+                        <li>Resource sharing for faster upgrades</li>
+                        <li>Coordinated defense when your bed is under attack</li>
+                    </ul>
+                `,
+                
+                // Additional strategies would follow the same pattern...
+                // For brevity, I've included a subset of the strategies
+                
+                'map-awareness': `
+                    <h2>Map Awareness Strategies</h2>
+                    <p>Good map awareness is crucial for success in BedWars:</p>
+                    
+                    <h3>Constant Scanning</h3>
+                    <p>Always be aware of your surroundings:</p>
+                    <ul>
+                        <li>Frequently check the scoreboard to see which teams still have beds</li>
+                        <li>Regularly scan the map for enemy movements</li>
+                        <li>Listen for audio cues like block breaking or footsteps</li>
+                    </ul>
+                    
+                    <h3>Position Tracking</h3>
+                    <p>Keep track of enemy positions:</p>
+                    <ol>
+                        <li>Note which directions enemies are coming from</li>
+                        <li>Predict where enemies might attack based on their resources</li>
+                        <li>Watch for bridge building toward your base</li>
+                    </ol>
+                    
+                    <h3>Resource Awareness</h3>
+                    <p>Be aware of resource control:</p>
+                    <ul>
+                        <li>Note which teams control diamond generators</li>
+                        <li>Keep track of which emerald generators are being contested</li>
+                        <li>Adjust your strategy based on resource availability</li>
+                    </ul>
+                `,
+                'final-fight': `
+                    <h2>Final Fight Techniques</h2>
+                    <p>When it's down to the final teams, these techniques can help you secure victory:</p>
+                    
+                    <h3>Positioning</h3>
+                    <p>Where you fight matters:</p>
+                    <ul>
+                        <li>Try to fight on your terms and your territory</li>
+                        <li>Use high ground for advantage</li>
+                        <li>Create environmental advantages with traps and obstacles</li>
+                    </ul>
+                    
+                    <h3>Resource Management</h3>
+                    <p>Make every resource count:</p>
+                    <ol>
+                        <li>Save your best gear for the final fight</li>
+                        <li>Use potions and special items strategically</li>
+                        <li>Make sure you have a backup set of gear</li>
+                    </ol>
+                    
+                    <h3>Psychological Warfare</h3>
+                    <p>Get in your opponent's head:</p>
+                    <ul>
+                        <li>Use unexpected tactics to confuse opponents</li>
+                        <li>Feign weakness to lure them into traps</li>
+                        <li>Apply constant pressure to force mistakes</li>
+                    </ul>
+                `,
+
+                 // Version 1.12.2 strategies
+'1122offhand': `
+    <h2>Off-hand Strategies for 1.12.2</h2>
+    <p>Version 1.12.2 introduced the off-hand slot, opening up new tactical possibilities in BedWars:</p>
+    
+    <h3>Utility Items in Off-hand</h3>
+    <p>What to keep in your off-hand for maximum effectiveness:</p>
+    <ul>
+        <li>Torches for quick placement while bridging</li>
+        <li>Blocks for fast defensive building during fights</li>
+        <li>Golden apples for quick healing during combat</li>
+        <li>Fireworks for elytra propulsion and area denial</li>
+    </ul>
+    
+    <h3>Combat Techniques</h3>
+    <p>Advanced combat strategies using the off-hand:</p>
+    <ol>
+        <li>Keep a totem of undying in off-hand for automatic resurrection</li>
+        <li>Use shields in off-hand for blocking while attacking</li>
+        <li>Quick-swap between items using hotkeys</li>
+        <li>Place blocks while maintaining offensive pressure</li>
+    </ol>
+    
+    <div class="tip">
+        <strong>Pro Tip:</strong> Bind your off-hand slot to an easily accessible key for quick swapping during intense battles.
+    </div>
+`,
+
+'1122sweeping': `
+    <h2>Sweeping Edge Techniques for 1.12.2</h2>
+    <p>The Sweeping Edge enchantment allows you to hit multiple enemies with a single attack:</p>
+    
+    <h3>Optimal Use Cases</h3>
+    <p>When to utilize sweeping attacks:</p>
+    <ul>
+        <li>When facing multiple enemies in close quarters</li>
+        <li>Against teams clustering around their bed</li>
+        <li>For crowd control in narrow spaces</li>
+        <li>When defending against rushers</li>
+    </ul>
+    
+    <h3>Enchantment Strategies</h3>
+    <p>How to maximize sweeping edge effectiveness:</p>
+    <ol>
+        <li>Combine Sweeping Edge with Sharpness for maximum damage</li>
+        <li>Use with Knockback to create space against multiple opponents</li>
+        <li>Prioritize Sweeping Edge III for the widest attack arc</li>
+        <li>Pair with Fire Aspect for area denial</li>
+    </ol>
+`,
+
+'1122totem': `
+    <h2>Totem of Undying Uses in 1.12.2</h2>
+    <p>Totems of Undying can turn the tide of battle when used strategically:</p>
+    
+    <h3>Strategic Applications</h3>
+    <p>When and how to use totems effectively:</p>
+    <ul>
+        <li>Use during final fights when your bed is broken</li>
+        <li>Keep in off-hand for automatic activation</li>
+        <li>Use when rushing well-defended bases</li>
+        <li>Activate during bridge fights to avoid falling to your death</li>
+    </ul>
+    
+    <h3>Acquisition Strategies</h3>
+    <p>How to obtain totems efficiently:</p>
+    <ol>
+        <li>Raid woodland mansions for guaranteed totems</li>
+        <li>Defeat evokers in raid events</li>
+        <li>Trade with other players who have spares</li>
+        <li>Loot from bastion remnants in the Nether</li>
+    </ol>
+    
+    <div class="tip">
+        <strong>Pro Tip:</strong> Totems not only save you from death but also provide temporary absorption hearts and regeneration.
+    </div>
+`,
+
+'1122elytra': `
+    <h2>Elytra Maneuvers for 1.12.2</h2>
+    <p>Elytra flight opens up entirely new mobility options in BedWars:</p>
+    
+    <h3>Flight Techniques</h3>
+    <p>Master these elytra movement skills:</p>
+    <ul>
+        <li>Rocket-powered bursts for quick escapes</li>
+        <li>Precision landing on small platforms</li>
+        <li>Dive bombing attacks on enemy positions</li>
+        <li>Avoiding bridge fights by flying over them</li>
+    </ul>
+    
+    <h3>Combat Applications</h3>
+    <p>How to incorporate elytra into your combat strategy:</p>
+    <ol>
+        <li>Use fireworks for rapid repositioning during fights</li>
+        <li>Perform aerial attacks from unexpected angles</li>
+        <li>Quickly traverse between islands without building bridges</li>
+        <li>Escape dangerous situations with vertical mobility</li>
+    </ol>
+`,
+
+'1122shulker': `
+    <h2>Shulker Box Tactics for 1.12.2</h2>
+    <p>Shulker boxes provide portable storage solutions that can change how you manage resources:</p>
+    
+    <h3>Inventory Management</h3>
+    <p>Optimize your inventory with shulker boxes:</p>
+    <ul>
+        <li>Dedicate boxes to specific resource types</li>
+        <li>Keep emergency supplies in color-coded boxes</li>
+        <li>Use for quick resource sorting at generator</li>
+        <li>Store backup gear for when your bed is destroyed</li>
+    </ul>
+    
+    <h3>Tactical Applications</h3>
+    <p>Creative uses for shulker boxes in combat:</p>
+    <ol>
+        <li>Create instant cover during bridge fights</li>
+        <li>Block pathways to slow pursuing enemies</li>
+        <li>Use as temporary barriers when defending</li>
+        <li>Store ender pearls for quick getaways</li>
+    </ol>
+`,
+
+// General Strategies
+'resource-mgmt': `
+    <h2>Resource Management Strategies</h2>
+    <p>Effective resource management is key to dominating in BedWars:</p>
+    
+    <h3>Priority Spending</h3>
+    <p>What to buy first with your resources:</p>
+    <ul>
+        <li>Iron: Blocks and tools first, then weapons</li>
+        <li>Gold: Armor upgrades and healing items</li>
+        <li>Diamonds: Sharpness and protection enchantments</li>
+        <li>Emeralds: Obsidian and powerful special items</li>
+    </ul>
+    
+    <h3>Efficient Collection</h3>
+    <p>How to maximize your resource gathering:</p>
+    <ol>
+        <li>Time your generator visits to avoid missing resources</li>
+        <li>Upgrade generators as soon as possible</li>
+        <li>Control mid-map generators for diamond/emerald advantage</li>
+        <li>Share resources with teammates based on role needs</li>
+    </ol>
+`,
+
+'communication': `
+    <h2>Communication Tips for BedWars</h2>
+    <p>Effective communication can make an average team great:</p>
+    
+    <h3>Essential Callouts</h3>
+    <p>What information to share with your team:</p>
+    <ul>
+        <li>Enemy positions and movements</li>
+        <li>Generator control status</li>
+        <li>Resource needs and surpluses</li>
+        <li>Bed defense status and vulnerabilities</li>
+    </ul>
+    
+    <h3>Team Coordination</h3>
+    <p>Strategies for working together effectively:</p>
+    <ol>
+        <li>Assign specific roles to each team member</li>
+        <li>Coordinate simultaneous attacks from multiple angles</li>
+        <li>Develop quick communication shorthand</li>
+        <li>Establish priority targets based on game state</li>
+    </ol>
+    
+    <div class="tip">
+        <strong>Pro Tip:</strong> Use consistent terminology that everyone on your team understands to avoid confusion during intense moments.
+    </div>
+`,
+
+'bed-defense': `
+    <h2>Bed Defense Ideas</h2>
+    <p>Protecting your bed is crucial for long-term success in BedWars:</p>
+    
+    <h3>Defense Strategies</h3>
+    <p>Different approaches to bed defense:</p>
+    <ul>
+        <li>End stone layers for blast resistance</li>
+        <li>Wood layers for early game economy</li>
+        <li>Obby (obsidian) for late game security</li>
+        <li>Layered defenses with multiple materials</li>
+    </ul>
+    
+    <h3>Trap Integration</h3>
+    <p>How to incorporate traps into your defense:</p>
+    <ol>
+        <li>Miner fatigue trap to slow attackers</li>
+        <li>Alarm trap to detect invisible players</li>
+        <li>Counter-offensive trap for strength boost</li>
+        <li>It's a trap! to reveal hidden enemies</li>
+    </ol>
+`,
+
+// Add this if it's also missing
+'bed-defense': `
+    <h2>Bed Defense Ideas</h2>
+    <p>Protecting your bed is crucial for long-term success in BedWars:</p>
+    
+    <h3>Material Selection</h3>
+    <p>Choose the right materials for your defense:</p>
+    <ul>
+        <li>End Stone: Blast-resistant and relatively affordable</li>
+        <li>Obsidian: Nearly indestructible but expensive</li>
+        <li>Wood: Cheap early-game option, weak to axes</li>
+        <li>Wool: Quickest to place but easiest to break</li>
+    </ul>
+    
+    <h3>Design Principles</h3>
+    <p>Effective bed defense designs:</p>
+    <ol>
+        <li>Create multiple layers with different materials</li>
+        <li>Leave small gaps to attack through while protected</li>
+        <li>Build defenses that force enemies into vulnerable positions</li>
+        <li>Incorporate traps to catch rushers off guard</li>
+    </ol>
+    
+    <div class="tip">
+        <strong>Pro Tip:</strong> The best bed defense is a combination of good materials, smart design, and active defense by team members.
+    </div>
+`
+            };
+            
+            strategyContent.innerHTML = strategies[strategyId] || '<p>Strategy content not found. Please try another strategy.</p>';
+            showModal('strategyModal');
+        }
+
+        // Show guide content
+        function showGuide(guideId) {
+            const guideContent = document.getElementById('guideContent');
+            
+            // Simulate different guide content
+            const guides = {
+                'first-night': `
+                    <h2>Surviving Your First Night</h2>
+                    <p>Your first night in Minecraft can be intimidating, but with these steps, you'll survive easily:</p>
+                    <ol>
+                        <li><strong>Punch trees</strong> to collect wood (about 10-15 blocks)</li>
+                        <li>Press <code>E</code> to open inventory and craft wooden planks</li>
+                        <li>Create a crafting table and place it on the ground</li>
+                        <li>Craft wooden tools: pickaxe, axe, sword</li>
+                        <li>Find a hillside or flat area and dig a small shelter</li>
+                        <li>Place torches to keep mobs from spawning</li>
+                        <li>Wait until morning or use a bed if you crafted one</li>
+                    </ol>
+                    <p>Pro tip: Don't wander too far from your shelter on the first day!</p>
+                `,
+                'crafting': `
+                    <h2>Complete Crafting Guide</h2>
+                    <p>Master the art of crafting with this comprehensive guide:</p>
+                    <h3>Basic Tools:</h3>
+                    <ul>
+                        <li><strong>Pickaxe:</strong> 3 planks + 2 sticks</li>
+                        <li><strong>Axe:</strong> 3 planks + 2 sticks</li>
+                        <li><strong>Sword:</strong> 2 planks + 1 stick</li>
+                        <li><strong>Shovel:</strong> 1 plank + 2 sticks</li>
+                    </ul>
+                    <h3>Essential Items:</h3>
+                    <ul>
+                        <li><strong>Torches:</strong> 1 stick + 1 coal</li>
+                        <li><strong>Crafting Table:</strong> 4 wooden planks</li>
+                        <li><strong>Furnace:</strong> 8 cobblestone</li>
+                        <li><strong>Chest:</strong> 8 wooden planks</li>
+                    </ul>
+                `,
+                'ender-dragon': `
+                    <h2>Defeating the Ender Dragon</h2>
+                    <p>The Ender Dragon is Minecraft's final boss. Here's how to prepare:</p>
+                    <h3>Preparation:</h3>
+                    <ul>
+                        <li>Full diamond armor with Protection IV</li>
+                        <li>Diamond sword with Sharpness V</li>
+                        <li>Bow with Power V and Infinity</li>
+                        <li>Several stacks of blocks for building</li>
+                        <li>Potions of Healing and Slow Falling</li>
+                        <li>Golden apples and plenty of food</li>
+                    </ul>
+                    <h3>Strategy:</h3>
+                    <ol>
+                        <li>Destroy the end crystals on top of the obsidian pillars</li>
+                        <li>Avoid the dragon's breath attack</li>
+                        <li>Shoot the dragon when it flies near the central portal</li>
+                        <li>Attack with your sword when it lands to recharge</li>
+                        <li>Repeat until the dragon is defeated</li>
+                    </ol>
+                `
+            };
+            
+            guideContent.innerHTML = guides[guideId] || '<p>Guide not found</p>';
+            showModal('guideModal');
+        }
+
+        // Download pack
+        function downloadPack(packId) {
+            showNotification('Downloading pack: ' + packId);
+            // In a real implementation, this would initiate a download
+        }
+
+        // Download mod
+        function downloadMod(modId) {
+            showNotification('Downloading mod: ' + modId);
+            // In a real implementation, this would initiate a download
+        }
+
+        // Show legal content
+        function showLegal(legalType) {
+            const legalContent = document.getElementById('legalContent');
+            
+            const legalTexts = {
+                'terms': `<h2>Terms of Service</h2>
+                    <p>By using Minecraft Hub, you agree to the following terms:</p>
+                    <ol>
+                        <li>You will not upload malicious content</li>
+                        <li>You will respect other community members</li>
+                        <li>You understand this is a fan-made site</li>
+                        <li>All downloads are used at your own risk</li>
+                    </ol>`,
+                'privacy': `<h2>Privacy Policy</h2>
+                    <p>We value your privacy. Here's what we collect:</p>
+                    <ul>
+                        <li>Email address for account creation</li>
+                        <li>Username for community features</li>
+                        <li>Download preferences to improve content</li>
+                    </ul>
+                    <p>We never sell your data to third parties.</p>`,
+                'cookies': `<h2>Cookie Policy</h2>
+                    <p>We use cookies to:</p>
+                    <ul>
+                        <li>Keep you logged in between sessions</li>
+                        <li>Remember your preferences</li>
+                        <li>Analyze site traffic and usage patterns</li>
+                    </ul>
+                    <p>You can disable cookies in your browser settings.</p>`,
+                'disclaimer': `<h2>Disclaimer</h2>
+                    <p>Minecraft Hub is a fan-made website and is not affiliated with Mojang Studios, Microsoft, or Minecraft.</p>
+                    <p>Minecraft is a trademark of Mojang Studios. All other trademarks are property of their respective owners.</p>
+                    <p>All resources are provided for educational purposes only.</p>`
+            };
+            
+            legalContent.innerHTML = legalTexts[legalType] || '<p>Content not found</p>';
+            showModal('legalModal');
+        }
+
+        // Search functionality
+        // Fixed search functionality - only this function has been modified
+function searchContent() {
+    const query = document.getElementById('searchInput').value.trim().toLowerCase();
+    
+    if (!query) {
+        showNotification('Please enter something to search for');
+        return;
+    }
+    
+    // Remove any previous highlights
+    removeHighlights();
+    
+    // Define searchable content with keywords
+    const searchKeywords = {
+        // Guides
+        'surviving': { action: 'guide', id: 'first-night', name: 'Surviving Your First Night' },
+        'first night': { action: 'guide', id: 'first-night', name: 'Surviving Your First Night' },
+        'crafting': { action: 'guide', id: 'crafting', name: 'Complete Crafting Guide' },
+        'ender dragon': { action: 'guide', id: 'ender-dragon', name: 'Ender Dragon Battle' },
+        'dragon': { action: 'guide', id: 'ender-dragon', name: 'Ender Dragon Battle' },
+        
+        // BedWars Strategies
+        'rushing': { action: 'strategy', id: '189rush', name: 'Rushing Strategies' },
+        'rush': { action: 'strategy', id: '189rush', name: 'Rushing Strategies' },
+        'resource': { action: 'strategy', id: '189resource', name: 'Resource Collection' },
+        'pvp': { action: 'strategy', id: '189pvp', name: 'PvP Techniques' },
+        'bridge': { action: 'strategy', id: '189bridge', name: 'Bridge Fighting' },
+        'defense': { action: 'strategy', id: '189defense', name: 'Defensive Tactics' },
+        'defensive': { action: 'strategy', id: '189defense', name: 'Defensive Tactics' },
+        'netherite': { action: 'strategy', id: '1165netherite', name: 'Netherite Strategies' },
+        'crossbow': { action: 'strategy', id: '1165crossbow', name: 'Crossbow Tactics' },
+        'bastion': { action: 'strategy', id: '1165bastion', name: 'Bastion Loot' },
+        'team': { action: 'strategy', id: '1165team', name: 'Team Coordination' },
+        'off-hand': { action: 'strategy', id: '1122offhand', name: 'Off-hand Strategies' },
+        'sweeping': { action: 'strategy', id: '1122sweeping', name: 'Sweeping Edge' },
+        'totem': { action: 'strategy', id: '1122totem', name: 'Totem of Undying' },
+        'elytra': { action: 'strategy', id: '1122elytra', name: 'Elytra Maneuvers' },
+        'shulker': { action: 'strategy', id: '1122shulker', name: 'Shulker Box Tactics' },
+        'map': { action: 'strategy', id: 'map-awareness', name: 'Map Awareness' },
+        'communication': { action: 'strategy', id: 'communication', name: 'Communication Tips' },
+        'bed defense': { action: 'strategy', id: 'bed-defense', name: 'Bed Defense Ideas' },
+        'final': { action: 'strategy', id: 'final-fight', name: 'Final Fight Techniques' },
+        
+        // Texture Packs
+        'texture': { action: 'section', id: 'packs', name: 'Texture Packs' },
+        'pack': { action: 'section', id: 'packs', name: 'Texture Packs' },
+        'faithful': { action: 'pack', id: 'faithful32x', name: 'Faithful 32x' },
+        'default': { action: 'pack', id: 'defaultedit', name: 'Default Edit' },
+        'lunar': { action: 'pack', id: 'lunar', name: 'Lunar Pack' },
+        'soartex': { action: 'pack', id: 'soartex', name: 'Soartex Fanver' },
+        'bdcraft': { action: 'pack', id: 'bdcraft', name: 'BDcraft' },
+        'ramye': { action: 'pack', id: 'ramye', name: 'Ramye 16x' },
+        
+        // Mods
+        'mod': { action: 'section', id: 'mods', name: 'Mods' },
+        'optifine': { action: 'mod', id: 'optifine', name: 'OptiFine' },
+        'biomes': { action: 'mod', id: 'biomesoplenty', name: 'Biomes O\' Plenty' },
+        'create': { action: 'mod', id: 'create', name: 'Create Mod' },
+        'reverie': { action: 'mod', id: 'reverie', name: 'Reverie Shader' },
+        
+        // Community
+        'community': { action: 'section', id: 'community', name: 'Community' },
+        'discord': { action: 'community', id: 'discord', name: 'Discord Server' },
+        'forum': { action: 'community', id: 'forum', name: 'Forums' },
+        'gallery': { action: 'community', id: 'gallery', name: 'Gallery' }
+    };
+    
+    // Find matching content
+    let foundMatch = null;
+    
+    for (const [keyword, content] of Object.entries(searchKeywords)) {
+        if (query.includes(keyword)) {
+            foundMatch = content;
+            break;
+        }
+    }
+    
+    // Show results
+    if (foundMatch) {
+        showNotification(`Found: ${foundMatch.name}`);
+        
+        // Navigate to appropriate section and show content
+        setTimeout(() => {
+            if (foundMatch.action === 'guide') {
+                document.getElementById('guides').scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => { showGuide(foundMatch.id); }, 500);
+            } 
+            else if (foundMatch.action === 'strategy') {
+                document.getElementById('bedwars').scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => { showStrategy(foundMatch.id); }, 500);
+            }
+            else if (foundMatch.action === 'section') {
+                document.getElementById(foundMatch.id).scrollIntoView({ behavior: 'smooth' });
+            }
+            else if (foundMatch.action === 'pack') {
+                document.getElementById('packs').scrollIntoView({ behavior: 'smooth' });
+            }
+            else if (foundMatch.action === 'mod') {
+                document.getElementById('mods').scrollIntoView({ behavior: 'smooth' });
+            }
+            else if (foundMatch.action === 'community') {
+                document.getElementById('community').scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 1000);
+    } else {
+        showNotification('No results found for: ' + query);
+    }
+}
+
+// Helper function to remove highlights from previous searches
+function removeHighlights() {
+    const highlights = document.querySelectorAll('.search-highlight');
+    highlights.forEach(el => {
+        const parent = el.parentNode;
+        parent.replaceChild(document.createTextNode(el.textContent), el);
+        parent.normalize();
+    });
+}
+
+// Add event listener for Enter key in search input
+document.getElementById('searchInput').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        searchContent();
+    }
+});
+
+        // Notification system
+        function showNotification(message) {
+            const notification = document.getElementById('notification');
+            const notificationText = document.getElementById('notificationText');
+            
+            notificationText.textContent = message;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+
+        // Tab functionality
+        // Search functionality
+function searchContent() {
+    const query = document.getElementById('searchInput').value.trim().toLowerCase();
+    
+    if (!query) {
+        showNotification('Please enter something to search for');
+        return;
+    }
+    
+    // Define searchable content with keywords
+    const searchKeywords = {
+        // Guides
+        'surviving': { action: 'guide', id: 'first-night', name: 'Surviving Your First Night' },
+        'first night': { action: 'guide', id: 'first-night', name: 'Surviving Your First Night' },
+        'crafting': { action: 'guide', id: 'crafting', name: 'Complete Crafting Guide' },
+        'ender dragon': { action: 'guide', id: 'ender-dragon', name: 'Ender Dragon Battle' },
+        'modern house': { action: 'guide', id: 'modern-house', name: 'Modern House Designs' },
+        'castle': { action: 'guide', id: 'castle-build', name: 'Castle Construction' },
+        'treehouse': { action: 'guide', id: 'treehouse-design', name: 'Treehouse Designs' },
+        'redstone': { action: 'guide', id: 'auto-doors', name: 'Redstone Creations' },
+        'automatic': { action: 'guide', id: 'auto-doors', name: 'Automatic Systems' },
+        'piston': { action: 'guide', id: 'auto-doors', name: 'Piston Mechanisms' },
+        'security': { action: 'guide', id: 'security-systems', name: 'Security Systems' },
+        'advanced combat': { action: 'guide', id: 'advanced-combat', name: 'Advanced Combat' },
+        'pvp': { action: 'guide', id: 'advanced-combat', name: 'PvP Techniques' },
+        'raid': { action: 'guide', id: 'raid-farming', name: 'Raid Farming' },
+        'enchant': { action: 'guide', id: 'enchantment-guide', name: 'Enchantment Strategies' },
+        
+        // BedWars Strategies
+        'rushing': { action: 'strategy', id: '189rush', name: 'Rushing Strategies' },
+        'rush': { action: 'strategy', id: '189rush', name: 'Rushing Strategies' },
+        'resource': { action: 'strategy', id: '189resource', name: 'Resource Collection' },
+        'pvp techniques': { action: 'strategy', id: '189pvp', name: 'PvP Techniques' },
+        'bridge fighting': { action: 'strategy', id: '189bridge', name: 'Bridge Fighting' },
+        'defense': { action: 'strategy', id: '189defense', name: 'Defensive Tactics' },
+        'defensive': { action: 'strategy', id: '189defense', name: 'Defensive Tactics' },
+        'combat mechanics': { action: 'strategy', id: '1165combat', name: 'Combat Mechanics' },
+        'netherite': { action: 'strategy', id: '1165netherite', name: 'Netherite Strategies' },
+        'crossbow': { action: 'strategy', id: '1165crossbow', name: 'Crossbow Tactics' },
+        'bastion': { action: 'strategy', id: '1165bastion', name: 'Bastion Loot' },
+        'team': { action: 'strategy', id: '1165team', name: 'Team Coordination' },
+        'off-hand': { action: 'strategy', id: '1122offhand', name: 'Off-hand Strategies' },
+        'sweeping': { action: 'strategy', id: '1122sweeping', name: 'Sweeping Edge' },
+        'totem': { action: 'strategy', id: '1122totem', name: 'Totem of Undying' },
+        'elytra': { action: 'strategy', id: '1122elytra', name: 'Elytra Maneuvers' },
+        'shulker': { action: 'strategy', id: '1122shulker', name: 'Shulker Box Tactics' },
+        'map awareness': { action: 'strategy', id: 'map-awareness', name: 'Map Awareness' },
+        'resource management': { action: 'strategy', id: 'resource-mgmt', name: 'Resource Management' },
+        'communication': { action: 'strategy', id: 'communication', name: 'Communication Tips' },
+        'bed defense': { action: 'strategy', id: 'bed-defense', name: 'Bed Defense Ideas' },
+        'final fight': { action: 'strategy', id: 'final-fight', name: 'Final Fight Techniques' },
+        
+        // Texture Packs
+        'texture': { action: 'section', id: 'packs', name: 'Texture Packs' },
+        'pack': { action: 'section', id: 'packs', name: 'Texture Packs' },
+        'faithful': { action: 'section', id: 'packs', name: 'Faithful 32x' },
+        'default edit': { action: 'section', id: 'packs', name: 'Default Edit' },
+        'lunar': { action: 'section', id: 'packs', name: 'Lunar Pack' },
+        'soartex': { action: 'section', id: 'packs', name: 'Soartex Fanver' },
+        'bdcraft': { action: 'section', id: 'packs', name: 'BDcraft' },
+        'ramye': { action: 'section', id: 'packs', name: 'Ramye 16x' },
+        
+        // Mods
+        'mod': { action: 'section', id: 'mods', name: 'Mods' },
+        'optifine': { action: 'section', id: 'mods', name: 'OptiFine' },
+        'biomes': { action: 'section', id: 'mods', name: 'Biomes O\' Plenty' },
+        'create': { action: 'section', id: 'mods', name: 'Create Mod' },
+        
+        // Community
+        'community': { action: 'section', id: 'community', name: 'Community' },
+        'discord': { action: 'section', id: 'community', name: 'Discord Server' },
+        'forum': { action: 'section', id: 'community', name: 'Forums' },
+        'gallery': { action: 'section', id: 'community', name: 'Gallery' }
+    };
+    
+    // Find matching content
+    let foundMatch = null;
+    
+    for (const [keyword, content] of Object.entries(searchKeywords)) {
+        if (query.includes(keyword)) {
+            foundMatch = content;
+            break;
+        }
+    }
+    
+    // Show results
+    if (foundMatch) {
+        showNotification(`Found: ${foundMatch.name}`);
+        
+        // Navigate to appropriate section and show content
+        setTimeout(() => {
+            if (foundMatch.action === 'guide') {
+                document.getElementById('guides').scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => { showGuide(foundMatch.id); }, 500);
+            } 
+            else if (foundMatch.action === 'strategy') {
+                document.getElementById('bedwars').scrollIntoView({ behavior: 'smooth' });
+                setTimeout(() => { showStrategy(foundMatch.id); }, 500);
+            }
+            else if (foundMatch.action === 'section') {
+                document.getElementById(foundMatch.id).scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 1000);
+    } else {
+        showNotification('No results found for: ' + query);
+    }
+}
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    // Add event listener for Enter key in search input
+const searchInput = document.getElementById('searchInput');
+if (searchInput) {
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            searchContent();
+        }
+    });
+}
+                    // Here you would show the corresponding tab content
+                    // For this example, we're just demonstrating the UI
+                    showNotification('Showing ' + btn.dataset.tab + ' guides');
+                });
+            });
+            
+            // Close modal when clicking outside
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) {
+                        closeModal(modal.id);
+                    }
+                });
+            });
+            
+            // Navigation active state
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    link.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
