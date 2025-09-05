@@ -1,11 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Minecraft Hub - Ultimate Guides &amp; Resources</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
-<style>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Minecraft Hub - Ultimate Guides &amp; Resources</title><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/><style>
         /* Global Styles */
         :root {
             --primary: #4CAF50;
@@ -574,531 +568,17 @@
                 padding: 20px;
             }
         }
-    </style>
-</head>
-<body>
-<!-- Header -->
-<header>
-<div class="container header-content">
-<div class="logo" id="logo">
-<i class="fas fa-cube"></i>
-<span>Minecraft Hub</span>
-</div>
-<nav>
-<ul>
-<li><a class="active" href="#home">Home</a></li>
-<li><a href="#guides">Guides</a></li>
-<li><a href="#bedwars">BedWars</a></li>
-<li><a href="#packs">Texture Packs</a></li>
-<li><a href="#mods">Mods</a></li>
-<li><a href="#servers">Best Servers</a></li>
-<li><a href="#discord">Best Discord Communities</a></li>
-<li><a href="#community">Community</a></li>
-</ul>
-</nav>
-</div>
-</header>
-<!-- Hero Section -->
-<section class="hero" id="home">
-<div class="container hero-content">
-<h1>Ultimate Minecraft Resources Hub</h1>
-<p>Your one-stop destination for guides, texture packs, mods, and BedWars strategies for all Minecraft versions</p>
-</div>
-</section>
-<!-- Guides Section -->
-<section id="guides">
-<div class="container">
-<div class="section-header">
-<h2>Guides &amp; Tutorials</h2>
-<p>Master Minecraft with our comprehensive guides for beginners and advanced players</p>
-</div>
-<div class="tabs">
-<button class="tab-btn active" data-tab="beginner">Beginner</button>
-</div>
-<div class="tab-content active" id="beginner-tab">
-<div class="card-grid">
-<div class="card">
-<div class="card-img">
-<i class="fas fa-moon"></i>
-</div>
-<div class="card-content">
-<h3>Surviving Your First Night</h3>
-<p>Complete step-by-step guide to survive your first night in Minecraft without dying.</p>
-<button class="btn btn-primary" onclick="showGuide('first-night')">Read Guide</button>
-<div class="card-meta">
-<span><i class="fas fa-clock"></i> 10 min read</span>
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-img">
-<i class="fas fa-tools"></i>
-</div>
-<div class="card-content">
-<h3>Complete Crafting Guide</h3>
-<p>Learn all essential crafting recipes and how to build your first tools and shelter.</p>
-<button class="btn btn-primary" onclick="showGuide('crafting')">Read Guide</button>
-<div class="card-meta">
-<span><i class="fas fa-clock"></i> 5 min read</span>
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-img">
-<i class="fas fa-dragon"></i>
-</div>
-<div class="card-content">
-<h3>Ender Dragon Battle</h3>
-<p>Strategies and preparation needed to defeat the Ender Dragon for the first time.</p>
-<button class="btn btn-primary" onclick="showGuide('ender-dragon')">Read Guide</button>
-<div class="card-meta">
-<span><i class="fas fa-clock"></i> 15 min read</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- BedWars Section -->
-<section id="bedwars" style="background: #E8F5E9;">
-<div class="container">
-<div class="section-header">
-<h2>BedWars Strategies</h2>
-<p>Master the popular BedWars minigame with version-specific strategies and tips</p>
-</div>
-<div class="version-grid">
-<div class="version-box">
-<h4>Version 1.8.9</h4>
-<ul>
-<li><a onclick="showStrategy('189rush')">Best rushing strategies</a></li>
-<li><a onclick="showStrategy('189resource')">Optimal resource collection</a></li>
-<li><a onclick="showStrategy('189pvp')">PvP techniques</a></li>
-<li><a onclick="showStrategy('189bridge')">Bridge fighting tips</a></li>
-<li><a onclick="showStrategy('189defense')">Defensive tactics</a></li>
-</ul>
-</div>
-<div class="version-box">
-<h4>Version 1.16.5</h4>
-<ul>
-<li><a onclick="showStrategy('1165combat')">New combat mechanics</a></li>
-<li><a onclick="showStrategy('1165netherite')">Netherite strategies</a></li>
-<li><a onclick="showStrategy('1165crossbow')">Crossbow tactics</a></li>
-<li><a onclick="showStrategy('1165bastion')">Bastion loot routes</a></li>
-<li><a onclick="showStrategy('1165team')">Team coordination</a></li>
-</ul>
-</div>
-<div class="version-box">
-<h4>Version 1.12.2</h4>
-<ul>
-<li><a onclick="showStrategy('1122offhand')">Off-hand strategies</a></li>
-<li><a onclick="showStrategy('1122sweeping')">Sweeping edge techniques</a></li>
-<li><a onclick="showStrategy('1122totem')">Totem of undying uses</a></li>
-<li><a onclick="showStrategy('1122elytra')">Elytra maneuvers</a></li>
-<li><a onclick="showStrategy('1122shulker')">Shulker box tactics</a></li>
-</ul>
-</div>
-<div class="version-box">
-<h4>General Strategies</h4>
-<ul>
-<li><a onclick="showStrategy('map-awareness')">Map awareness</a></li>
-<li><a onclick="showStrategy('resource-mgmt')">Resource management</a></li>
-<li><a onclick="showStrategy('communication')">Communication tips</a></li>
-<li><a onclick="showStrategy('bed-defense')">Bed defense ideas</a></li>
-<li><a onclick="showStrategy('final-fight')">Final fight techniques</a></li>
-</ul>
-</div>
-</div>
-</div>
-</section>
-<!-- Texture Packs Section -->
-<section id="packs">
-<div class="container">
-<div class="section-header">
-<h2>Texture Packs</h2>
-<p>Download the best texture packs for various Minecraft versions</p>
-</div>
-<table class="downloads-table">
-<thead>
-<tr>
-<th>Pack Name</th>
-<th>Version</th>
-<th>Style</th>
-<th>Description</th>
-<th>Download</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Texture Pack FOLDER</td>
-<td>1.8.9</td>
-<td>PvP - FPS Boost</td>
-<td>Everything You Need</td>
-<td><a href="https://download2284.mediafire.com/7t4gd33m59kgOuoWiqGQLwfUW5pvc0-fZuTWPp-2tOkH2qdQzE7Ms-94T-fLue9OA19S-TNwt5fZMVLALzWqBHpdFHdtwrDTVgytNfRoPN7bVcuLsc2lBhCUVfR2IPMw-mORWFg52kU3DqTS7rdaRYe9Z_DORbh5xRSgDx1VQFbmqV0v/21cbjmtlv7rbeow/secondslol+pack+folder.zip" onclick="downloadPack('faithful32x')">Download</a></td>
-</tr>
-<tr>
-<td>Dewier's 60k Texture Pack</td>
-<td>1.8.9</td>
-<td>PvP Optimized</td>
-<td>Ultimate PvP Texture Pack</td>
-<td><a href="https://www.mediafire.com/file/pvgancjgakrjxtl/%21_%C2%A75Dewier_%C2%A77%5B%C2%A7660k%C2%A77%5D.zip/file" onclick="downloadPack('defaultedit')">Download</a></td>
-</tr>
-<tr>
-<td>NotNico's 150k Pack</td>
-<td>1.8.9</td>
-<td>Hacker</td>
-<td>My Personnal Favorite Pack</td>
-<td><a href="https://www.mediafire.com/file/1bx0p423evr1uf3/Super_E%252B.zip/file" onclick="downloadPack('lunar')">Download</a></td>
-</tr>
-<tr>
-<td>Bedless Noob's 300k Pack</td>
-<td>1.8.9</td>
-<td>Easy to Win</td>
-<td>Smooth and clean textures with a cohesive look</td>
-<td><a href="https://www.mediafire.com/file/titkjvmy5z3k3f9/!+++++++++++++++%C2%A7dBedless+Noob+%C2%A7b300k+" onclick="downloadPack('soartex')">Download</a></td>
-</tr>
-<tr>
-<td>Ramye 16x</td>
-<td>1.21</td>
-<td>smooth and clean</td>
-<td>the best 16x Bedwars, PvP, and Crystal PvP texture pack for Minecraft 1.21</td>
-<td><a href="https://www.mediafire.com/file/cgi31mjuxjm81f3/!+%C3%82%C2%A72Ramye+%C3%82%C2%A7716x+%C3%82%C2%A76" onclick="downloadPack('bdcraft')">Download</a></td>
-</tr>
-</tbody>
-</table>
-</div>
-</section>
-<!-- Mods Section -->
-<section id="mods" style="background: #E8F5E9;">
-<div class="container">
-<div class="section-header">
-<h2>Mods</h2>
-<p>Enhance your Minecraft experience with these amazing mods</p>
-</div>
-<div class="card-grid">
-<div class="card">
-<div class="card-img">
-<i class="fas fa-puzzle-piece"></i>
-</div>
-<div class="card-content">
-<h3>Reverie</h3>
-<p>Shader with a foggy and warm look. It leverages new features added by Iris for effects previously impossible to achieve.</p>
-<button class="btn btn-primary" onclick="window.open('https://modrinth.com/shader/reverie_shader/version/0.3')">Download</button>
-<div class="card-meta">
-<span><i class="fas fa-download"></i> 10.2M</span>
-<span><i class="fas fa-star"></i> 4.9/5</span>
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-img">
-<i class="fas fa-tree"></i>
-</div>
-<div class="card-content">
-<h3>Biomes O' Plenty</h3>
-<p>Adds dozens of new biomes to explore in your world</p>
-<button class="btn btn-primary" onclick="window.open('https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty')">Download</button>
-<div class="card-meta">
-<span><i class="fas fa-download"></i> 5.7M</span>
-<span><i class="fas fa-star"></i> 4.8/5</span>
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-img">
-<i class="fas fa-cogs"></i>
-</div>
-<div class="card-content">
-<h3>Create Mod</h3>
-<p>Adds steam-powered machinery and moving contraptions</p>
-<button class="btn btn-primary" onclick="window.open('https://www.curseforge.com/minecraft/mc-mods/create')">Download</button>
-<div class="card-meta">
-<span><i class="fas fa-download"></i> 3.2M</span>
-<span><i class="fas fa-star"></i> 4.9/5</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Add these sections after the "Mods" section -->
-<!-- Best Servers Section -->
-<section id="servers" style="background: #E8F5E9;">
-<div class="container">
-<div class="section-header">
-<h2>Best Minecraft Servers</h2>
-<p>Discover the best Minecraft servers for various game modes</p>
-</div>
-<div class="card-grid">
-<div class="card">
-<div class="card-img">
-<i class="fas fa-server"></i>
-</div>
-<div class="card-content">
-<h3>Hypixel</h3>
-<p>One of the most popular Minecraft servers with various game modes</p>
-<button class="btn btn-primary" onclick="navigator.clipboard.writeText('mc.hypixel.net'); showNotification('Server IP copied to clipboard')">Copy IP</button>
-<div class="card-meta">
-<span><i class="fas fa-users"></i> 300k+ Players</span>
-<span><i class="fas fa-star"></i> 4.9/5</span>
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-img">
-<i class="fas fa-server"></i>
-</div>
-<div class="card-content">
-<h3>Gamster</h3>
-<p>Romania's premier Minecraft server for fun and competition</p>
-<button class="btn btn-primary" onclick="navigator.clipboard.writeText('gamster.org'); showNotification('Server IP copied to clipboard')">Copy IP</button>
-<div class="card-meta">
-<span><i class="fas fa-users"></i> 3k+ Players</span>
-<span><i class="fas fa-star"></i> 4.1/5</span>
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-img">
-<i class="fas fa-server"></i>
-</div>
-<div class="card-content">
-<h3>Pika Network</h3>
-<p>Join a global Minecraft community with unique game modes and competitive gameplay</p>
-<button class="btn btn-primary" onclick="navigator.clipboard.writeText('play.pikamc.net'); showNotification('Server IP copied to clipboard')">Copy IP</button>
-<div class="card-meta">
-<span><i class="fas fa-users"></i> 10k+ Players</span>
-<span><i class="fas fa-star"></i> 4.6/5</span>
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-img">
-<i class="fas fa-server"></i>
-</div>
-<div class="card-content">
-<h3>BridgerLand</h3>
-<p>Practice your Minecraft skills with modes for bridging,clutch and reducer, aim, and more</p>
-<button class="btn btn-primary" onclick="navigator.clipboard.writeText('cracked.bridger.land'); showNotification('Server IP copied to clipboard')">Copy IP</button>
-<div class="card-meta">
-<span><i class="fas fa-users"></i> 1k+ Players</span>
-<span><i class="fas fa-star"></i> 4.5/5</span>
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-img">
-<i class="fas fa-server"></i>
-</div>
-<div class="card-content">
-<h3>Mineplex</h3>
-<p> A hub for Minecraft fun with Survival, Skyblock, and more</p>
-<button class="btn btn-primary" onclick="navigator.clipboard.writeText('us.mineplex.com'); showNotification('Server IP copied to clipboard')">Copy IP</button>
-<div class="card-meta">
-<span><i class="fas fa-users"></i> 5k+ Players</span>
-<span><i class="fas fa-star"></i> 4.8/5</span>
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-img">
-<i class="fas fa-server"></i>
-</div>
-<div class="card-content">
-<h3>Bedwars Practice</h3>
-<p>Right Place to Practice and Improve your siklls </p>
-<button class="btn btn-primary" onclick="navigator.clipboard.writeText('bedwarspractice.club'); showNotification('Server IP copied to clipboard')">Copy IP</button>
-<div class="card-meta">
-<span><i class="fas fa-users"></i> 3k+ Players</span>
-<span><i class="fas fa-star"></i> 4.8/5</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Best Discord Communities Section -->
-<section id="discord">
-<div class="container">
-<div class="section-header">
-<h2>Best Discord Communities</h2>
-<p>Join the best Discord communities for Minecraft enthusiasts</p>
-</div>
-<div class="card-grid">
-<div class="card">
-<div class="card-img">
-<i class="fab fa-discord"></i>
-</div>
-<div class="card-content">
-<h3>1.8 Tier Tests </h3>
-<p>A Discord server for Minecraft 1.8 PvP enthusiasts, featuring tests, challenges, and discussions on gameplay mechanics and strategies</p>
-<button class="btn btn-primary" onclick="window.open('https://discord.gg/hF673xWVQB')">Join Discord</button>
-<div class="card-meta">
-<span><i class="fas fa-users"></i> 20k+ Members</span>
-<span><i class="fas fa-star"></i> 4.9/5</span>
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-img">
-<i class="fab fa-discord"></i>
-</div>
-<div class="card-content">
-<h3>Minecraft Official Server</h3>
-<p>A community hub for Minecraft fans, featuring news, updates, community events, and support from the Minecraft team</p>
-<button class="btn btn-primary" onclick="window.open('https://discord.gg/minecraft')">Join Discord</button>
-<div class="card-meta">
-<span><i class="fas fa-users"></i> 2M+ Members</span>
-<span><i class="fas fa-star"></i> 4.9/5</span>
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-img">
-<i class="fab fa-discord"></i>
-</div>
-<div class="card-content">
-<h3>Hypixel Discord</h3>
-<p>Join the largest Minecraft server community! Discuss Hypixel games, get support, share tips, and connect with millions of players</p>
-<button class="btn btn-primary" onclick="window.open(' https://discord.gg/hypixel')">Join Discord</button>
-<div class="card-meta">
-<span><i class="fas fa-users"></i> 470k+ Members</span>
-<span><i class="fas fa-star"></i> 4.8/5</span>
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-img">
-<i class="fab fa-discord"></i>
-</div>
-<div class="card-content">
-<h3>BATCHI LAND</h3>
-<p>Game On! Minecraft &amp; beyond. Join the community for server discussions, gameplay events, and gaming fun!</p>
-<button class="btn btn-primary" onclick="window.open('https://discord.gg/SQ3ZWApaga')">Join Discord</button>
-<div class="card-meta">
-<span><i class="fas fa-users"></i> 1k+ Members</span>
-<span><i class="fas fa-star"></i> 4.7/5</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Community Section -->
-<section id="community">
-<div class="container">
-<div class="section-header">
-<h2>Community</h2>
-<p>Join our growing community of Minecraft enthusiasts</p>
-</div>
-<div class="card-grid">
-<div class="card">
-<div class="card-img">
-<i class="fas fa-comments"></i>
-</div>
-<div class="card-content">
-<h3>Forums</h3>
-<p>Discuss strategies, share builds, and get help from other players</p>
-<button class="btn btn-primary" onclick="showNotification('Our forums are currently being set up! Please join our Discord server for now to discuss strategies and share builds.')">Visit Forums</button>
-</div>
-</div>
-<div class="card">
-<div class="card-img">
-<i class="fas fa-users"></i>
-</div>
-<div class="card-content">
-<h3>Discord Server</h3>
-<p>Join our Discord community for real-time chat and events</p>
-<button class="btn btn-primary" onclick="window.open('https://discord.gg/vCfkTBBy')">Join Discord</button>
-</div>
-</div>
-<div class="card">
-<div class="card-img">
-<i class="fas fa-camera"></i>
-</div>
-<div class="card-content">
-<h3>Gallery</h3>
-<p>Show off your builds and explore creations from others</p>
-<button class="btn btn-primary" onclick="showNotification('All our community builds and pictures are shared in our Discord server! Join our Discord to view and share creations.')">View Gallery</button>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer -->
-<footer>
-<div class="container">
-<div class="footer-content">
-<div class="footer-column">
-<h3>Minecraft Hub</h3>
-<p>Your ultimate resource for Minecraft guides, texture packs, mods, and BedWars strategies.</p>
-<div class="social-links">
-<a href="https://discord.gg/vCfkTBBy"><i class="fab fa-discord"></i></a>
-<a href="https://youtube.com/@redeexzy?si=UW1wLJjdHMDHK35O"><i class="fab fa-youtube"></i></a>
-</div>
-</div>
-<div class="footer-column">
-<h3>Quick Links</h3>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#guides">Guides</a></li>
-<li><a href="#bedwars">BedWars</a></li>
-<li><a href="#packs">Texture Packs</a></li>
-<li><a href="#mods">Mods</a></li>
-</ul>
-</div>
-<div class="footer-column">
-<h3>Resources</h3>
-<ul>
-<li><a href="https://www.minecraft.net" target="_blank">Minecraft Official Site</a></li>
-<li><a href="https://minecraft.fandom.com" target="_blank">Minecraft Wiki</a></li>
-<li><a href="https://hypixel.net" target="_blank">Hypixel Server</a></li>
-<li><a href="https://www.curseforge.com" target="_blank">CurseForge</a></li>
-<li><a href="https://www.planetminecraft.com" target="_blank">Planet Minecraft</a></li>
-</ul>
-</div>
-<div class="footer-column">
-<h3>Legal</h3>
-<ul>
-<li><a href="#" onclick="showLegal('terms')">Terms of Service</a></li>
-<li><a href="#" onclick="showLegal('privacy')">Privacy Policy</a></li>
-<li><a href="#" onclick="showLegal('cookies')">Cookie Policy</a></li>
-<li><a href="#" onclick="showLegal('disclaimer')">Disclaimer</a></li>
-</ul>
-</div>
-</div>
-<div class="copyright">
-<p>© 2025 Minecraft Hub. This is a fan-made website. Not affiliated with Mojang or Microsoft.</p>
-<p>Minecraft is a trademark of Mojang Studios. All other trademarks are property of their respective owners. created by Redeex</p>
-</div>
-</div>
-</footer>
-<!-- Strategy Modal -->
-<div class="modal" id="strategyModal">
-<div class="modal-content">
-<span class="close-modal" onclick="closeModal('strategyModal')">×</span>
-<div class="strategy-content" id="strategyContent"></div>
-</div>
-</div>
-<!-- Guide Modal -->
-<div class="modal" id="guideModal">
-<div class="modal-content">
-<span class="close-modal" onclick="closeModal('guideModal')">×</span>
-<div id="guideContent"></div>
-</div>
-</div>
-<!-- Legal Modal -->
-<div class="modal" id="legalModal">
-<div class="modal-content">
-<span class="close-modal" onclick="closeModal('legalModal')">×</span>
-<div id="legalContent"></div>
-</div>
-</div>
-<!-- Notification -->
-<div class="notification" id="notification">
-<span id="notificationText"></span>
-</div>
-<script>
+        #swills .card-grid {
+    display: flex;
+    justify-content: center;   /* centers horizontally */
+    gap: 30px;                 /* space between cards */
+    flex-wrap: wrap;           /* keeps it responsive */
+}
+#swills .card {
+    flex: 0 1 350px;           /* keeps cards same size */
+}
+
+    </style></head><body><!-- Header --><header><div class="container header-content"><div class="logo" id="logo"><i class="fas fa-cube"></i><span>Minecraft Hub</span></div><nav><ul><li><a class="active" href="#home">Home</a></li><li><a href="#guides">Guides</a></li><li><a href="#bedwars">BedWars</a></li><li><a href="#packs">Texture Packs</a></li><li><a href="#mods">Mods</a></li><li><a href="#servers">Best Servers</a></li><li><a href="#discord">Best Discord Communities</a></li><li><a href="#swills">Swills</a></li><li><a href="#community">Community</a></li></ul></nav></div></header><!-- Hero Section --><section class="hero" id="home"><div class="container hero-content"><h1>Ultimate Minecraft Resources Hub</h1><p>Your one-stop destination for guides, texture packs, mods, and BedWars strategies for all Minecraft versions</p></div></section><!-- Guides Section --><section id="guides"><div class="container"><div class="section-header"><h2>Guides &amp; Tutorials</h2><p>Master Minecraft with our comprehensive guides for beginners and advanced players</p></div><div class="tabs"><button class="tab-btn active" data-tab="beginner">Beginner</button></div><div class="tab-content active" id="beginner-tab"><div class="card-grid"><div class="card"><div class="card-img"><i class="fas fa-moon"></i></div><div class="card-content"><h3>Surviving Your First Night</h3><p>Complete step-by-step guide to survive your first night in Minecraft without dying.</p><button class="btn btn-primary" onclick="showGuide('first-night')">Read Guide</button><div class="card-meta"><span><i class="fas fa-clock"></i> 10 min read</span></div></div></div><div class="card"><div class="card-img"><i class="fas fa-tools"></i></div><div class="card-content"><h3>Complete Crafting Guide</h3><p>Learn all essential crafting recipes and how to build your first tools and shelter.</p><button class="btn btn-primary" onclick="showGuide('crafting')">Read Guide</button><div class="card-meta"><span><i class="fas fa-clock"></i> 5 min read</span></div></div></div><div class="card"><div class="card-img"><i class="fas fa-dragon"></i></div><div class="card-content"><h3>Ender Dragon Battle</h3><p>Strategies and preparation needed to defeat the Ender Dragon for the first time.</p><button class="btn btn-primary" onclick="showGuide('ender-dragon')">Read Guide</button><div class="card-meta"><span><i class="fas fa-clock"></i> 15 min read</span></div></div></div></div></div></div></section><!-- BedWars Section --><section id="bedwars" style="background: #E8F5E9;"><div class="container"><div class="section-header"><h2>BedWars Strategies</h2><p>Master the popular BedWars minigame with version-specific strategies and tips, including equivalent tactics for SMP and Lifesteal servers.</p></div><div class="version-grid"><div class="version-box"><h4>Version 1.8.9</h4><ul><li><a onclick="showStrategy('189rush')">Best rushing strategies</a></li><li><a onclick="showStrategy('189resource')">Optimal resource collection</a></li><li><a onclick="showStrategy('189pvp')">PvP techniques</a></li><li><a onclick="showStrategy('189bridge')">Bridge fighting tips</a></li><li><a onclick="showStrategy('189defense')">Defensive tactics</a></li></ul></div><div class="version-box"><h4>Version 1.16.5</h4><ul><li><a onclick="showStrategy('1165combat')">New combat mechanics</a></li><li><a onclick="showStrategy('1165netherite')">Netherite strategies</a></li><li><a onclick="showStrategy('1165crossbow')">Crossbow tactics</a></li><li><a onclick="showStrategy('1165bastion')">Bastion loot routes</a></li><li><a onclick="showStrategy('1165team')">Team coordination</a></li></ul></div><div class="version-box"><h4>Version 1.12.2</h4><ul><li><a onclick="showStrategy('1122offhand')">Off-hand strategies</a></li><li><a onclick="showStrategy('1122sweeping')">Sweeping edge techniques</a></li><li><a onclick="showStrategy('1122totem')">Totem of undying uses</a></li><li><a onclick="showStrategy('1122elytra')">Elytra maneuvers</a></li><li><a onclick="showStrategy('1122shulker')">Shulker box tactics</a></li></ul></div><div class="version-box"><h4>General Strategies</h4><ul><li><a onclick="showStrategy('map-awareness')">Map awareness</a></li><li><a onclick="showStrategy('resource-mgmt')">Resource management</a></li><li><a onclick="showStrategy('communication')">Communication tips</a></li><li><a onclick="showStrategy('bed-defense')">Bed defense ideas</a></li><li><a onclick="showStrategy('final-fight')">Final fight techniques</a></li></ul></div></div></div></section><!-- Texture Packs Section --><section id="packs"><div class="container"><div class="section-header"><h2>Texture Packs</h2><p>Download the best texture packs for various Minecraft versions</p></div><table class="downloads-table"><thead><tr><th>Pack Name</th><th>Version</th><th>Style</th><th>Description</th><th>Download</th></tr></thead><tbody><tr><td>Texture Pack FOLDER</td><td>1.8.9</td><td>PvP - FPS Boost</td><td>Everything You Need</td><td><a href="https://download2284.mediafire.com/7t4gd33m59kgOuoWiqGQLwfUW5pvc0-fZuTWPp-2tOkH2qdQzE7Ms-94T-fLue9OA19S-TNwt5fZMVLALzWqBHpdFHdtwrDTVgytNfRoPN7bVcuLsc2lBhCUVfR2IPMw-mORWFg52kU3DqTS7rdaRYe9Z_DORbh5xRSgDx1VQFbmqV0v/21cbjmtlv7rbeow/secondslol+pack+folder.zip" onclick="downloadPack('secondslol')">Download</a></td></tr><tr><td>Dewier's 60k Texture Pack</td><td>1.8.9</td><td>PvP Optimized</td><td>Ultimate PvP Texture Pack</td><td><a href="https://www.mediafire.com/file/pvgancjgakrjxtl/%21_%C2%A75Dewier_%C2%A77%5B%C2%A7660k%C2%A77%5D.zip/file" onclick="downloadPack('60k Dewier')">Download</a></td></tr><tr><td>NotNico's 150k Pack</td><td>1.8.9</td><td>Hacker</td><td>My Personnal Favorite Pack</td><td><a href="https://www.mediafire.com/file/1bx0p423evr1uf3/Super_E%252B.zip/file" onclick="downloadPack('NotNico')">Download</a></td></tr><tr><td>Bedless Noob's 300k Pack</td><td>1.8.9</td><td>Easy to Win</td><td>Smooth and clean textures with a cohesive look</td><td><a href="https://www.mediafire.com/file/titkjvmy5z3k3f9/!+++++++++++++++%C2%A7dBedless+Noob+%C2%A7b300k+" onclick="downloadPack('Bedless Noob')">Download</a></td></tr><tr><td>Ramye 16x</td><td>1.21</td><td>smooth and clean</td><td>the best 16x Bedwars, PvP, and Crystal PvP texture pack for Minecraft 1.21</td><td><a href="https://www.mediafire.com/file/cgi31mjuxjm81f3/!+%C3%82%C2%A72Ramye+%C3%82%C2%A7716x+%C3%82%C2%A76" onclick="downloadPack('Ramye')">Download</a></td></tr></tbody></table></div></section><!-- Mods Section --><section id="mods" style="background: #E8F5E9;"><div class="container"><div class="section-header"><h2>Mods</h2><p>Enhance your Minecraft experience with these amazing mods</p></div><div class="card-grid"><div class="card"><div class="card-img"><i class="fas fa-puzzle-piece"></i></div><div class="card-content"><h3>Reverie</h3><p>Shader with a foggy and warm look. It leverages new features added by Iris for effects previously impossible to achieve.</p><button class="btn btn-primary" onclick="window.open('https://modrinth.com/shader/reverie_shader/version/0.3')">Download</button><div class="card-meta"><span><i class="fas fa-download"></i> 10.2M</span><span><i class="fas fa-star"></i> 4.9/5</span></div></div></div><div class="card"><div class="card-img"><i class="fas fa-tree"></i></div><div class="card-content"><h3>Biomes O' Plenty</h3><p>Adds dozens of new biomes to explore in your world</p><button class="btn btn-primary" onclick="window.open('https://www.curseforge.com/minecraft/mc-mods/biomes-o-plenty')">Download</button><div class="card-meta"><span><i class="fas fa-download"></i> 5.7M</span><span><i class="fas fa-star"></i> 4.8/5</span></div></div></div><div class="card"><div class="card-img"><i class="fas fa-cogs"></i></div><div class="card-content"><h3>Create Mod</h3><p>Adds steam-powered machinery and moving contraptions</p><button class="btn btn-primary" onclick="window.open('https://www.curseforge.com/minecraft/mc-mods/create')">Download</button><div class="card-meta"><span><i class="fas fa-download"></i> 3.2M</span><span><i class="fas fa-star"></i> 4.9/5</span></div></div></div></div></div></section><!-- Add these sections after the "Mods" section --><!-- Best Servers Section --><section id="servers" style="background: #E8F5E9;"><div class="container"><div class="section-header"><h2>Best Minecraft Servers</h2><p>Discover the best Minecraft servers for various game modes</p></div><div class="card-grid"><div class="card"><div class="card-img"><i class="fas fa-server"></i></div><div class="card-content"><h3>Hypixel</h3><p>One of the most popular Minecraft servers with various game modes</p><button class="btn btn-primary" onclick="navigator.clipboard.writeText('mc.hypixel.net'); showNotification('Server IP copied to clipboard')">Copy IP</button><div class="card-meta"><span><i class="fas fa-users"></i> 300k+ Players</span><span><i class="fas fa-star"></i> 4.9/5</span></div></div></div><div class="card"><div class="card-img"><i class="fas fa-server"></i></div><div class="card-content"><h3>Gamster</h3><p>Romania's premier Minecraft server for fun and competition</p><button class="btn btn-primary" onclick="navigator.clipboard.writeText('gamster.org'); showNotification('Server IP copied to clipboard')">Copy IP</button><div class="card-meta"><span><i class="fas fa-users"></i> 3k+ Players</span><span><i class="fas fa-star"></i> 4.1/5</span></div></div></div><div class="card"><div class="card-img"><i class="fas fa-server"></i></div><div class="card-content"><h3>Pika Network</h3><p>Join a global Minecraft community with unique game modes and competitive gameplay</p><button class="btn btn-primary" onclick="navigator.clipboard.writeText('play.pikamc.net'); showNotification('Server IP copied to clipboard')">Copy IP</button><div class="card-meta"><span><i class="fas fa-users"></i> 10k+ Players</span><span><i class="fas fa-star"></i> 4.6/5</span></div></div></div><div class="card"><div class="card-img"><i class="fas fa-server"></i></div><div class="card-content"><h3>BridgerLand</h3><p>Practice your Minecraft skills with modes for bridging,clutch and reducer, aim, and more</p><button class="btn btn-primary" onclick="navigator.clipboard.writeText('cracked.bridger.land'); showNotification('Server IP copied to clipboard')">Copy IP</button><div class="card-meta"><span><i class="fas fa-users"></i> 1k+ Players</span><span><i class="fas fa-star"></i> 4.5/5</span></div></div></div><div class="card"><div class="card-img"><i class="fas fa-server"></i></div><div class="card-content"><h3>Mineplex</h3><p> A hub for Minecraft fun with Survival, Skyblock, and more</p><button class="btn btn-primary" onclick="navigator.clipboard.writeText('us.mineplex.com'); showNotification('Server IP copied to clipboard')">Copy IP</button><div class="card-meta"><span><i class="fas fa-users"></i> 5k+ Players</span><span><i class="fas fa-star"></i> 4.8/5</span></div></div></div><div class="card"><div class="card-img"><i class="fas fa-server"></i></div><div class="card-content"><h3>Bedwars Practice</h3><p>Right Place to Practice and Improve your siklls </p><button class="btn btn-primary" onclick="navigator.clipboard.writeText('bedwarspractice.club'); showNotification('Server IP copied to clipboard')">Copy IP</button><div class="card-meta"><span><i class="fas fa-users"></i> 3k+ Players</span><span><i class="fas fa-star"></i> 4.8/5</span></div></div></div></div></div></section><!-- Best Discord Communities Section --><section id="discord"><div class="container"><div class="section-header"><h2>Best Discord Communities</h2><p>Join the best Discord communities for Minecraft enthusiasts</p></div><div class="card-grid"><div class="card"><div class="card-img"><i class="fab fa-discord"></i></div><div class="card-content"><h3>1.8 Tier Tests </h3><p>A Discord server for Minecraft 1.8 PvP enthusiasts, featuring tests, challenges, and discussions on gameplay mechanics and strategies</p><button class="btn btn-primary" onclick="window.open('https://discord.gg/hF673xWVQB')">Join Discord</button><div class="card-meta"><span><i class="fas fa-users"></i> 20k+ Members</span><span><i class="fas fa-star"></i> 4.9/5</span></div></div></div><div class="card"><div class="card-img"><i class="fab fa-discord"></i></div><div class="card-content"><h3>Minecraft Official Server</h3><p>A community hub for Minecraft fans, featuring news, updates, community events, and support from the Minecraft team</p><button class="btn btn-primary" onclick="window.open('https://discord.gg/minecraft')">Join Discord</button><div class="card-meta"><span><i class="fas fa-users"></i> 2M+ Members</span><span><i class="fas fa-star"></i> 4.9/5</span></div></div></div><div class="card"><div class="card-img"><i class="fab fa-discord"></i></div><div class="card-content"><h3>Dewier's Dungeon</h3><p>Join Dewier’s community for Minecraft discussion, guides, PvP practice, and more!</p><button class="btn btn-primary" onclick="window.open('https://discord.gg/https://discord.gg/eEqBnx4gBR')">Join Discord</button><div class="card-meta"><span><i class="fas fa-users"></i> 11k+ Members</span><span><i class="fas fa-star"></i> 4.9/5</span></div></div></div><div class="card"><div class="card-img"><i class="fab fa-discord"></i></div><div class="card-content"><h3>Hypixel Discord</h3><p>Join the largest Minecraft server community! Discuss Hypixel games, get support, share tips, and connect with millions of players</p><button class="btn btn-primary" onclick="window.open(' https://discord.gg/hypixel')">Join Discord</button><div class="card-meta"><span><i class="fas fa-users"></i> 470k+ Members</span><span><i class="fas fa-star"></i> 4.8/5</span></div></div></div><div class="card"><div class="card-img"><i class="fab fa-discord"></i></div><div class="card-content"><h3>BATCHI LAND</h3><p>Game On! Minecraft &amp; beyond. Join the community for server discussions, gameplay events, and gaming fun!</p><button class="btn btn-primary" onclick="window.open('https://discord.gg/SQ3ZWApaga')">Join Discord</button><div class="card-meta"><span><i class="fas fa-users"></i> 1k+ Members</span><span><i class="fas fa-star"></i> 4.7/5</span></div></div></div></div></div></section><!-- Swills Optimization Program Section --><section id="swills" style="background: #F9F9F9;"><div class="container"><div class="section-header"><h2>Swills Optimization Program</h2><p>Boost your system and Minecraft performance with professional optimization plans. Use our custom coupon to save money and support us when purchasing any Swills plan!</p></div><div class="card-grid"><div class="card"><div class="card-img"><i class="fas fa-rocket"></i></div><div class="card-content"><h3>Standard Plan</h3><p> Boost your FPS and reduce latency with core optimizations for smoother gameplay in Minecraft and other popular titles. </p><ul style="margin-top:10px; color:#555; font-size:0.95rem;"><li>1. Copy the coupon using the button below.</li><li>2. Open the <a href="https://swills.gg/pricing" style="color:#4CAF50; font-weight:600; text-decoration:underline;" target="_blank">Swills website</a>.</li><li>3. Scroll down to the pricing section.</li><li>4. Click <strong>Buy Now</strong> under the Standard Plan.</li><li>5. Paste your coupon and complete your information.</li></ul><button class="btn btn-primary" onclick="navigator.clipboard.writeText('REDEEX'); showNotification('Coupon copied to clipboard!')">Copy Coupon</button><div class="card-meta"><span><i class="fas fa-tag"></i> Starter Discount</span><span><i class="fas fa-star"></i> 4.9/5</span></div></div></div><div class="card"><div class="card-img"><i class="fas fa-crown"></i></div><div class="card-content"><h3>Premium Plan</h3><p> Unlock full performance with advanced optimizations for FPS, input lag, and network stability — perfect for competitive gaming. </p><ul style="margin-top:10px; color:#555; font-size:0.95rem;"><li>1. Copy the coupon using the button below.</li><li>2. Open the <a href="https://swills.gg/pricing" style="color:#4CAF50; font-weight:600; text-decoration:underline;" target="_blank">Swills website</a>.</li><li>3. Scroll down to the pricing section.</li><li>4. Click <strong>Buy Now</strong> under the Premium Plan.</li><li>5. Paste your coupon and complete your information.</li></ul><button class="btn btn-primary" onclick="navigator.clipboard.writeText('REDEEX'); showNotification('Coupon copied to clipboard!')">Copy Coupon</button><div class="card-meta"><span><i class="fas fa-tag"></i> Exclusive Savings</span><span><i class="fas fa-star"></i> 5.0/5</span></div></div></div></div></div></section><!-- Community Section --><section id="community"><div class="container"><div class="section-header"><h2>Community</h2><p>Join our growing community of Minecraft enthusiasts</p></div><div class="card-grid"><div class="card"><div class="card-img"><i class="fas fa-comments"></i></div><div class="card-content"><h3>Forums</h3><p>Discuss strategies, share builds, and get help from other players</p><button class="btn btn-primary" onclick="showNotification('Our forums are currently being set up! Please join our Discord server for now to discuss strategies and share builds.')">Visit Forums</button></div></div><div class="card"><div class="card-img"><i class="fas fa-users"></i></div><div class="card-content"><h3>Discord Server</h3><p>Join our Discord community for real-time chat and events</p><button class="btn btn-primary" onclick="window.open('https://discord.gg/n9TCbkkPFT')">Join Discord</button></div></div><div class="card"><div class="card-img"><i class="fas fa-camera"></i></div><div class="card-content"><h3>Gallery</h3><p>Show off your builds and explore creations from others</p><button class="btn btn-primary" onclick="showNotification('All our community builds and pictures are shared in our Discord server! Join our Discord to view and share creations.')">View Gallery</button></div></div></div></div></section><!-- Footer --><footer><div class="container"><div class="footer-content"><div class="footer-column"><h3>Minecraft Hub</h3><p>Your ultimate resource for Minecraft guides, texture packs, mods, and BedWars strategies.</p><div class="social-links"><a href="https://discord.gg/n9TCbkkPFT"><i class="fab fa-discord"></i></a><a href="https://youtube.com/@redeexzy?si=UW1wLJjdHMDHK35O"><i class="fab fa-youtube"></i></a></div></div><div class="footer-column"><h3>Quick Links</h3><ul><li><a href="#home">Home</a></li><li><a href="#guides">Guides</a></li><li><a href="#bedwars">BedWars</a></li><li><a href="#packs">Texture Packs</a></li><li><a href="#mods">Mods</a></li></ul></div><div class="footer-column"><h3>Resources</h3><ul><li><a href="https://www.minecraft.net" target="_blank">Minecraft Official Site</a></li><li><a href="https://minecraft.fandom.com" target="_blank">Minecraft Wiki</a></li><li><a href="https://hypixel.net" target="_blank">Hypixel Server</a></li><li><a href="https://www.curseforge.com" target="_blank">CurseForge</a></li><li><a href="https://www.planetminecraft.com" target="_blank">Planet Minecraft</a></li></ul></div><div class="footer-column"><h3>Legal</h3><ul><li><a href="#" onclick="showLegal('terms')">Terms of Service</a></li><li><a href="#" onclick="showLegal('privacy')">Privacy Policy</a></li><li><a href="#" onclick="showLegal('cookies')">Cookie Policy</a></li><li><a href="#" onclick="showLegal('disclaimer')">Disclaimer</a></li></ul></div></div><div class="copyright"><p>© 2025 Minecraft Hub. This is a fan-made website. Not affiliated with Mojang or Microsoft.</p><p>Minecraft is a trademark of Mojang Studios. All other trademarks are property of their respective owners. created by a Student called Redeex</p></div></div></footer><!-- Strategy Modal --><div class="modal" id="strategyModal"><div class="modal-content"><span class="close-modal" onclick="closeModal('strategyModal')">×</span><div class="strategy-content" id="strategyContent"></div></div></div><!-- Guide Modal --><div class="modal" id="guideModal"><div class="modal-content"><span class="close-modal" onclick="closeModal('guideModal')">×</span><div id="guideContent"></div></div></div><!-- Legal Modal --><div class="modal" id="legalModal"><div class="modal-content"><span class="close-modal" onclick="closeModal('legalModal')">×</span><div id="legalContent"></div></div></div><!-- Notification --><div class="notification" id="notification"><span id="notificationText"></span></div><script>
         // Modal functionality
         function showModal(modalId) {
             document.getElementById(modalId).style.display = 'flex';
@@ -1123,7 +603,7 @@
                         <li>Collect 8 iron from your generator immediately</li>
                         <li>Buy 32 blocks (usually wool)</li>
                         <li>Rush to the nearest island without gathering more resources</li>
-                        <li>Break their bed quickly before they have time to set up defenses</li>
+                        <li>Break their bed quickly before they have time to set up defenses and try to kill they</li>
                     </ol>
                     <h3>Side Rush Technique</h3>
                     <p>Instead of rushing directly, try this approach:</p>
@@ -1141,7 +621,6 @@
                     <p>Efficient resource management is key to dominating in BedWars. Here's how to optimize your resource collection in version 1.8.9:</p>
                     <h3>Generator Prioritization</h3>
                     <ul>
-                        <li>Always upgrade your iron generator first - it's the most important</li>
                         <li>Time your visits to generators to maximize collection</li>
                         <li>Don't wait for generators to fill completely - frequent small collections are better</li>
                     </ul>
@@ -1156,7 +635,7 @@
                     <p>Emeralds are powerful but risky to obtain:</p>
                     <ul>
                         <li>Only go for emeralds when you have a secure base</li>
-                        <li>Prioritize obsidian and powerful items like bridge eggs</li>
+                        <li>Prioritize obsidian and powerful items like bridge eggs or ender pearls quick rushing</li>
                         <li>Consider getting invisibility potions for surprise attacks</li>
                     </ul>
                 `,
@@ -1166,7 +645,7 @@
                     <h3>Click Timing</h3>
                     <p>In 1.8.9, how you click matters:</p>
                     <ul>
-                        <li>Aim for 6-8 CPS (clicks per second) for optimal damage</li>
+                        <li>Aim for 10-16 CPS (clicks per second) for optimal damage</li>
                         <li>Butterfly clicking and jitter clicking are popular techniques</li>
                         <li>Focus on accuracy over speed - well-placed hits matter more</li>
                     </ul>
@@ -1177,13 +656,6 @@
                         <li>Incorporate crouching to throw off your opponent's aim</li>
                         <li>Use sprint resetting to maintain combos</li>
                     </ol>
-                    <h3>Rod and Bow Usage</h3>
-                    <p>Ranged weapons can give you an advantage:</p>
-                    <ul>
-                        <li>Use fishing rods to create distance and start combos</li>
-                        <li>Practice bow shots from various distances</li>
-                        <li>Learn to quick-swap between sword and rod</li>
-                    </ul>
                     <div class="tip">
                         <strong>Pro Tip:</strong> In 1.8.9, blockhitting (right-clicking with a sword) can reduce damage taken and help you win close-quarters fights.
                     </div>
@@ -1203,7 +675,7 @@
                     <ol>
                         <li>Place blocks behind you to slow pursuers</li>
                         <li>Create turns in your bridge to break line of sight</li>
-                        <li>Use ender pearls or leap potions to escape if available</li>
+                        <li>Use ender pearls or bridge eggs to escape if available</li>
                     </ol>
                     <h3>Offensive Bridge Fighting</h3>
                     <p>When attacking someone on a bridge:</p>
@@ -1269,7 +741,7 @@
                 `,
                 '1165netherite': `
                     <h2>Netherite Strategies for 1.16.5</h2>
-                    <p>Netherite is a powerful new material introduced in 1.16 that can give you a significant advantage:</p>
+                    <p>Note: Some items like Netherite are only on custom SMP servers. On Hypixel BedWars, stick to diamond/iron gear.</p>
                     <h3>Obtaining Netherite</h3>
                     <p>Getting Netherite requires specific steps:</p>
                     <ul>
@@ -1286,315 +758,389 @@
                         <li>Knockback resistance</li>
                     </ol>
                     <h3>Strategic Uses</h3>
-                    <p>How to best utilize Netherite:</p>
+                    <p>How to best utilize Netherite (on SMP / Lifesteal servers or custom maps):</p>
                     <ul>
-                        <li>Prioritize Netherite weapons over armor for damage output</li>
-                        <li>Consider Netherite boots for knockback resistance in bridge fights</li>
-                        <li>Use Netherite tools for faster resource gathering</li>
+                        <li>Prioritize Netherite weapons over armor for higher damage output in fights.</li>
+                        <li>Consider Netherite boots for extra knockback resistance during bridge or PvP duels.</li>
+                        <li>Use Netherite tools to gather resources faster on SMP servers.</li>
+                        <li>On Hypixel BedWars, replace Netherite with diamond/iron gear — the strategy remains the same: focus on timing and positioning.</li>
+                        <li>For Lifesteal or SMP servers, combine Netherite gear with healing items (golden apples, lifesteal swords) for sustainable fights.</li>
                     </ul>
                 `,
                 '1165crossbow': `
-                    <h2>Crossbow Tactics for 1.16.5</h2>
-                    <p>Crossbows are powerful ranged weapons that can be game-changers in BedWars:</p>
-                    <h3>Crossbow vs Bow</h3>
-                    <p>Understanding the differences:</p>
-                    <ul>
-                        <li>Crossbows have longer range but slower reload time</li>
-                        <li>Crossbows can be pre-loaded and fired instantly</li>
-                        <li>Multishot and piercing enchantments are unique to crossbows</li>
-                    </ul>
-                    <h3>Effective Crossbow Use</h3>
-                    <p>Strategies for maximizing crossbow effectiveness:</p>
-                    <ol>
-                        <li>Pre-load crossbows before engaging in combat</li>
-                        <li>Use multishot for area denial or against multiple opponents</li>
-                        <li>Piercing arrows can hit through multiple enemies</li>
-                    </ol>
-                    <h3>Special Arrow Types</h3>
-                    <p>Different arrows have different effects:</p>
-                    <ul>
-                        <li>Spectator arrows reveal enemy positions</li>
-                        <li>Tipped arrows with status effects can turn the tide of battle</li>
-                        <li>Rocket arrows (with fireworks) deal area damage</li>
-                    </ul>
-                `, 
+    <h2>Ranged Combat Strategies for 1.16.5</h2>
+    <p>While Hypixel BedWars uses bows, on SMP or Lifesteal servers you can experiment with crossbows and other ranged weapons:</p>
+    <h3>Bows vs Crossbows</h3>
+    <p>Understanding the differences on different servers:</p>
+    <ul>
+        <li>Bows are fast and easy to spam in BedWars; crossbows deal more damage but have slower reload.</li>
+        <li>Crossbows can be pre-loaded and fired strategically for surprise attacks on SMP servers.</li>
+        <li>Use enchantments like Power and Punch on bows, and Multishot or Piercing on crossbows if the server allows.</li>
+    </ul>
+    <h3>Effective Ranged Tactics</h3>
+    <p>How to maximize ranged attacks:</p>
+    <ol>
+        <li>Pre-load crossbows or keep arrows ready before engaging in fights.</li>
+        <li>Use ranged attacks to control bridges or choke points.</li>
+        <li>Combine with melee rushes for hybrid strategies on SMP or Lifesteal servers.</li>
+    </ol>
+    <h3>Projectile Variations</h3>
+    <p>Different projectiles and tactics to consider:</p>
+    <ul>
+        <li>Standard arrows for quick poke damage in BedWars.</li>
+        <li>Tipped arrows with slowness or poison can be effective on SMP servers.</li>
+        <li>Firework rockets with crossbows can deal area damage on custom servers that allow them.</li>
+    </ul>
+    <div class="tip">
+        <strong>Pro Tip:</strong> On Hypixel, focus on bow timing and movement. On SMP/Lifesteal, mix ranged and melee for maximum advantage.
+    </div>
+`,
                 '1165bastion': `
-                    <h2>Bastion Loot Routes for 1.16.5</h2>
-                    <p>Bastions are structures in the Nether that contain valuable loot but are heavily guarded:</p>
-                    <h3>Bastion Types</h3>
-                    <p>There are four types of bastions with different loot:</p>
-                    <ul>
-                        <li>Housing Units: Contain gold blocks and piglin housing</li>
-                        <li>Treasure Rooms: Most valuable loot but heavily guarded</li>
-                        <li>Bridge: Connects different parts of the bastion</li>
-                        <li>Stables: Where piglins keep their hoglins</li>
-                    </ul>
-                    <h3>Looting Strategies</h3>
-                    <p>How to safely loot a bastion:</p>
-                    <ol>
-                        <li>Wear gold armor to avoid piglin aggression</li>
-                        <li>Bring plenty of blocks to navigate and create barriers</li>
-                        <li>Focus on treasure rooms for the most valuable items</li>
-                        <li>Be prepared to fight piglin brutes - they're hostile even with gold armor</li>
-                    </ol>
-                    <h3>Valuable Loot</h3>
-                    <p>What to look for in bastions:</p>
-                    <ul>
-                        <li>Netherite ingots and ancient debris</li>
-                        <li>Diamond gear and enchantment books</li>
-                        <li>Gold blocks and ingots</li>
-                        <li>Unique music discs and other rare items</li>
-                    </ul>
-                `,
+    <h2>Resource & Loot Strategies for 1.16.4</h2>
+    <p>In BedWars, controlling resources and loot locations is key to winning. On SMP or Lifesteal servers, you can expand these strategies for survival and fights:</p>
+    <h3>Loot & Resource Points</h3>
+    <p>Know where to get valuable resources:</p>
+    <ul>
+        <li>Diamond and emerald generators: Control mid-map resources for upgrades.</li>
+        <li>Gold and iron at your base: Quickly buy armor, weapons, and blocks.</li>
+        <li>Special loot chests on SMP servers: Can contain enchanted gear or healing items.</li>
+    </ul>
+    <h3>Gathering & Fighting Strategies</h3>
+    <p>How to gather resources safely and fight effectively:</p>
+    <ol>
+        <li>Upgrade your armor early to survive rushes.</li>
+        <li>Use blocks to create quick barriers or traps.</li>
+        <li>Push teams when they are low on resources to gain control.</li>
+        <li>On SMP servers, prioritize safe looting and retreat when needed.</li>
+    </ol>
+    <h3>Strategic Uses</h3>
+    <p>How to best utilize your loot and gear:</p>
+    <ul>
+        <li>Keep a mix of weapons and healing items ready for bridge fights.</li>
+        <li>Use ranged attacks to soften opponents before engaging in melee.</li>
+        <li>Store backup gear for when your bed/base is under attack.</li>
+        <li>On SMP or Lifesteal servers, use looted gear for prolonged fights or duels.</li>
+    </ul>
+    <div class="tip">
+        <strong>Pro Tip:</strong> Always control mid-map and high-value loot points to keep the advantage over other players.
+    </div>
+`,
                 '1165team': `
-                    <h2>Team Coordination in 1.16.5</h2>
-                    <p>Effective team coordination is more important than ever in version 1.16.5:</p>
-                    <h3>Role Specialization</h3>
-                    <p>Assign specific roles to team members:</p>
-                    <ul>
-                        <li>Rusher: Focuses on attacking other teams early</li>
-                        <li>Base Defender: Stays to protect the bed and gather resources</li>
-                        <li>Mid Controller: Focuses on controlling diamond and emerald generators</li>
-                        <li>Support: Helps teammates with resources and backup</li>
-                    </ul>
-                    <h3>Communication Strategies</h3>
-                    <p>How to communicate effectively with your team:</p>
-                    <ol>
-                        <li>Use quick chat messages for common situations</li>
-                        <li>Call out enemy positions and movements</li>
-                        <li>Coordinate attacks on specific teams</li>
-                        <li>Share resources based on who needs them most</li>
-                    </ol>
-                    <h3>Advanced Team Tactics</h3>
-                    <p>Strategies for coordinated team play:</p>
-                    <ul>
-                        <li>Simultaneous attacks from multiple angles</li>
-                        <li>Bait and switch tactics to distract enemies</li>
-                        <li>Resource sharing for faster upgrades</li>
-                        <li>Coordinated defense when your bed is under attack</li>
-                    </ul>
-                `,
+    <h2>Team Coordination in Hypixel 1.16.4 BedWars</h2>
+    <p>Good teamwork can make or break a game. On SMP or Lifesteal servers, similar coordination helps during raids or duels.</p>
+    <h3>Role Specialization</h3>
+    <p>Assign clear roles to your team:</p>
+    <ul>
+        <li>Rusher: Aggressively attacks enemy teams to destroy beds early.</li>
+        <li>Defender: Protects your bed/base and gathers resources efficiently.</li>
+        <li>Mid Controller: Focuses on controlling diamond and emerald areas to upgrade gear.</li>
+        <li>Support: Shares resources, assists teammates in fights, and covers gaps.</li>
+    </ul>
+    <h3>Communication Tips</h3>
+    <p>Stay coordinated with your team:</p>
+    <ol>
+        <li>Use quick chat or push-to-talk to call out enemy positions.</li>
+        <li>Signal when you need backup or resources.</li>
+        <li>Coordinate rushes or defensive maneuvers in real time.</li>
+        <li>Share resources and potions to ensure everyone is well-equipped.</li>
+    </ol>
+    <h3>Advanced Tactics</h3>
+    <p>Maximize team efficiency:</p>
+    <ul>
+        <li>Attack from multiple directions to overwhelm opponents.</li>
+        <li>Use bait-and-switch to lure enemies into traps or ambushes.</li>
+        <li>Keep a shared pool of blocks and tools for fast building.</li>
+        <li>On SMP/Lifesteal servers, coordinate team fights and retreats strategically.</li>
+    </ul>
+    <div class="tip">
+        <strong>Pro Tip:</strong> Always assign someone to keep track of enemy movements. Controlling mid-map resources and protecting your bed is easier with full team awareness.
+    </div>
+`,
                 // Version 1.12.2 strategies
-                '1122offhand': `
-                    <h2>Off-hand Strategies for 1.12.2</h2>
-                    <p>Version 1.12.2 introduced the off-hand slot, opening up new tactical possibilities in BedWars:</p>
-                    <h3>Utility Items in Off-hand</h3>
-                    <p>What to keep in your off-hand for maximum effectiveness:</p>
-                    <ul>
-                        <li>Torches for quick placement while bridging</li>
-                        <li>Blocks for fast defensive building during fights</li>
-                        <li>Golden apples for quick healing during combat</li>
-                        <li>Fireworks for elytra propulsion and area denial</li>
-                    </ul>
-                    <h3>Combat Techniques</h3>
-                    <p>Advanced combat strategies using the off-hand:</p>
-                    <ol>
-                        <li>Keep a totem of undying in off-hand for automatic resurrection</li>
-                        <li>Use shields in off-hand for blocking while attacking</li>
-                        <li>Quick-swap between items using hotkeys</li>
-                        <li>Place blocks while maintaining offensive pressure</li>
-                    </ol>
-                    <div class="tip">
-                        <strong>Pro Tip:</strong> Bind your off-hand slot to an easily accessible key for quick swapping during intense battles.
-                    </div>
-                `,
-                '1122sweeping': `
-                    <h2>Sweeping Edge Techniques for 1.12.2</h2>
-                    <p>The Sweeping Edge enchantment allows you to hit multiple enemies with a single attack:</p>
-                    <h3>Optimal Use Cases</h3>
-                    <p>When to utilize sweeping attacks:</p>
-                    <ul>
-                        <li>When facing multiple enemies in close quarters</li>
-                        <li>Against teams clustering around their bed</li>
-                        <li>For crowd control in narrow spaces</li>
-                        <li>When defending against rushers</li>
-                    </ul>
-                    <h3>Enchantment Strategies</h3>
-                    <p>How to maximize sweeping edge effectiveness:</p>
-                    <ol>
-                        <li>Combine Sweeping Edge with Sharpness for maximum damage</li>
-                        <li>Use with Knockback to create space against multiple opponents</li>
-                        <li>Prioritize Sweeping Edge III for the widest attack arc</li>
-                        <li>Pair with Fire Aspect for area denial</li>
-                    </ol>
-                `,
+'1122offhand': `
+    <h2>Off-hand Strategies for 1.12.2</h2>
+    <p>The off-hand slot opens up new tactical possibilities, especially on SMP or Lifesteal servers. In Hypixel BedWars, the off-hand is less versatile, but the same concept applies to using quick-access items like blocks, healing, or utility items.</p>
+    <h3>Best Items in Off-hand (SMP/Lifesteal)</h3>
+    <ul>
+        <li>Blocks: Quickly build defenses or bridges during fights</li>
+        <li>Golden Apples: Instant healing when under pressure</li>
+        <li>Ender Pearls: Quick escapes or aggressive plays</li>
+        <li>Snowballs or eggs: Push enemies off bridges or beds</li>
+    </ul>
+    <h3>Combat Techniques</h3>
+    <ol>
+        <li>Keep blocks in off-hand to place barriers while attacking</li>
+        <li>Swap to healing items instantly during intense fights</li>
+        <li>Use throwable items to control space or knock enemies back</li>
+        <li>On SMP/Lifesteal, use off-hand for duels or retreating safely</li>
+    </ol>
+    <h3>Hypixel BedWars Equivalent</h3>
+    <ul>
+        <li>Use blocks in your hotbar to quickly build defenses or escape</li>
+        <li>Use healing items like potions or soup (if custom maps allow) strategically</li>
+        <li>Knockback sticks or snowballs can simulate off-hand utility</li>
+    </ul>
+    <div class="tip">
+        <strong>Pro Tip:</strong> Even without a full off-hand system on Hypixel, treat your hotbar as your “off-hand” — swap items fast and think ahead for clutch plays.
+    </div>
+`,
+            '1122sweeping': `
+    <h2>Sweeping Edge Techniques for 1.12.2</h2>
+    <p>Sweeping Edge is mostly an SMP or Lifesteal server strategy where hitting multiple enemies at once is possible. In Hypixel BedWars, while Sweeping Edge doesn’t exist, you can think of this as using area-of-effect attacks or knockback techniques to hit clustered enemies.</p>
+    <h3>When to Use Sweeping Attacks (SMP/Lifesteal)</h3>
+    <ul>
+        <li>During group fights around your base or in open PvP areas</li>
+        <li>When multiple opponents rush you simultaneously</li>
+        <li>For controlling narrow bridges, chokepoints, or contested areas</li>
+        <li>While defending against groups to soften them before committing to a duel</li>
+    </ul>
+    <h3>Maximizing Effectiveness</h3>
+    <ol>
+        <li>Combine Sweeping Edge with Sharpness for higher damage on each hit</li>
+        <li>Use knockback items sparingly to create space or disrupt enemy formations</li>
+        <li>Prioritize higher levels (e.g., Sweeping Edge III) for maximum coverage</li>
+        <li>In SMP/Lifesteal, weaken groups before fully engaging to avoid being overwhelmed</li>
+    </ol>
+    <h3>Hypixel BedWars Equivalent</h3>
+    <ul>
+        <li>Use knockback sticks, splash potions (if available in custom maps), or smart sword timing to hit multiple players</li>
+        <li>Push enemies off bridges or into hazards to simulate area damage</li>
+        <li>Target clumped players first when defending or rushing</li>
+    </ul>
+    <div class="tip">
+        <strong>Pro Tip:</strong> Think of Sweeping Edge as controlling space and hitting multiple enemies efficiently — even if the exact enchantment isn’t in Hypixel BedWars.
+    </div>
+`,
                 '1122totem': `
-                    <h2>Totem of Undying Uses in 1.12.2</h2>
-                    <p>Totems of Undying can turn the tide of battle when used strategically:</p>
-                    <h3>Strategic Applications</h3>
-                    <p>When and how to use totems effectively:</p>
-                    <ul>
-                        <li>Use during final fights when your bed is broken</li>
-                        <li>Keep in off-hand for automatic activation</li>
-                        <li>Use when rushing well-defended bases</li>
-                        <li>Activate during bridge fights to avoid falling to your death</li>
-                    </ul>
-                    <h3>Acquisition Strategies</h3>
-                    <p>How to obtain totems efficiently:</p>
-                    <ol>
-                        <li>Raid woodland mansions for guaranteed totems</li>
-                        <li>Defeat evokers in raid events</li>
-                        <li>Trade with other players who have spares</li>
-                        <li>Loot from bastion remnants in the Nether</li>
-                    </ol>
-                    <div class="tip">
-                        <strong>Pro Tip:</strong> Totems not only save you from death but also provide temporary absorption hearts and regeneration.
-                    </div>
-                `,
+    <h2>Totem of Undying Uses (SMP / Lifesteal Servers)</h2>
+    <p>Totems of Undying aren’t in Hypixel BedWars, but on SMP or Lifesteal servers, they can completely turn fights around:</p>
+    <h3>Strategic Applications</h3>
+    <p>How to use Totems in SMP / Lifesteal:</p>
+    <ul>
+        <li>Use during risky PvP fights when your health is low</li>
+        <li>Carry in off-hand for automatic resurrection in critical moments</li>
+        <li>Activate during base raids to avoid dying from traps or fall damage</li>
+        <li>Combine with armor and potions to make clutch escapes</li>
+    </ul>
+    <h3>Hypixel BedWars Equivalent</h3>
+    <p>Since Hypixel doesn’t have Totems, here’s how you can replicate similar advantages:</p>
+    <ul>
+        <li>Keep a Fireball or TNT in inventory to disrupt opponents and buy yourself time</li>
+        <li>Use Ender Pearls to escape dangerous situations like the Totem would</li>
+        <li>Stock up on Healing Potions or Golden Apples for clutch survivability</li>
+        <li>Keep blocks handy for quick defenses or bridging out of danger</li>
+    </ul>
+    <div class="tip">
+        <strong>Pro Tip:</strong> Think of Totems as a “safety net.” In Hypixel BedWars, use Ender Pearls, Fireballs, or Golden Apples to achieve a similar clutch effect.
+    </div>
+`,
                 '1122elytra': `
-                    <h2>Elytra Maneuvers for 1.12.2</h2>
-                    <p>Elytra flight opens up entirely new mobility options in BedWars:</p>
-                    <h3>Flight Techniques</h3>
-                    <p>Master these elytra movement skills:</p>
-                    <ul>
-                        <li>Rocket-powered bursts for quick escapes</li>
-                        <li>Precision landing on small platforms</li>
-                        <li>Dive bombing attacks on enemy positions</li>
-                        <li>Avoiding bridge fights by flying over them</li>
-                    </ul>
-                    <h3>Combat Applications</h3>
-                    <p>How to incorporate elytra into your combat strategy:</p>
-                    <ol>
-                        <li>Use fireworks for rapid repositioning during fights</li>
-                        <li>Perform aerial attacks from unexpected angles</li>
-                        <li>Quickly traverse between islands without building bridges</li>
-                        <li>Escape dangerous situations with vertical mobility</li>
-                    </ol>
-                `,
+    <h2>Elytra Maneuvers for 1.12.2</h2>
+    <p>Elytra flight unlocks advanced mobility on SMP or Lifesteal servers. In Hypixel BedWars, elytra aren’t available, but similar strategies apply using quick bridging, jump pads, or ender pearls.</p>
+    <h3>Flight Techniques (SMP/Lifesteal)</h3>
+    <ul>
+        <li>Rocket-powered bursts for quick escapes or repositioning</li>
+        <li>Precision landings on small platforms or rooftop PvP fights</li>
+        <li>Dive-bombing attacks on enemy bases or clumped groups</li>
+        <li>Avoiding ground skirmishes by flying over chokepoints</li>
+    </ul>
+    <h3>Combat Applications</h3>
+    <ol>
+        <li>Use fireworks or speed boosts for rapid repositioning during fights</li>
+        <li>Attack from aerial angles that opponents don’t expect</li>
+        <li>Traverse between bases quickly without building bridges</li>
+        <li>Escape dangerous situations vertically rather than directly fighting</li>
+    </ol>
+    <h3>Hypixel BedWars Equivalent</h3>
+    <ul>
+        <li>Use ender pearls or bridging techniques to mimic aerial mobility</li>
+        <li>Perform surprise attacks from above using blocks or parkour paths</li>
+        <li>Quickly rotate between islands using speed bridging</li>
+    </ul>
+    <div class="tip">
+        <strong>Pro Tip:</strong> Even without elytra in BedWars, think vertically and plan attack paths like you would with flight on SMP or Lifesteal servers.
+    </div>
+`,
+'1122elytra': `
+    <h2>Elytra Maneuvers for 1.12.2</h2>
+    <p>Elytra flight unlocks advanced mobility on SMP or Lifesteal servers. In Hypixel BedWars, elytra aren’t available, but similar strategies apply using quick bridging, jump pads, or ender pearls.</p>
+    <h3>Flight Techniques (SMP/Lifesteal)</h3>
+    <ul>
+        <li>Rocket-powered bursts for quick escapes or repositioning</li>
+        <li>Precision landings on small platforms or rooftop PvP fights</li>
+        <li>Dive-bombing attacks on enemy bases or clumped groups</li>
+        <li>Avoiding ground skirmishes by flying over chokepoints</li>
+    </ul>
+    <h3>Combat Applications</h3>
+    <ol>
+        <li>Use fireworks or speed boosts for rapid repositioning during fights</li>
+        <li>Attack from aerial angles that opponents don’t expect</li>
+        <li>Traverse between bases quickly without building bridges</li>
+        <li>Escape dangerous situations vertically rather than directly fighting</li>
+    </ol>
+    <h3>Hypixel BedWars Equivalent</h3>
+    <ul>
+        <li>Use ender pearls or bridging techniques to mimic aerial mobility</li>
+        <li>Perform surprise attacks from above using blocks or parkour paths</li>
+        <li>Quickly rotate between islands using speed bridging</li>
+    </ul>
+    <div class="tip">
+        <strong>Pro Tip:</strong> Even without elytra in BedWars, think vertically and plan attack paths like you would with flight on SMP or Lifesteal servers.
+    </div>
+`,
                 '1122shulker': `
-                    <h2>Shulker Box Tactics for 1.12.2</h2>
-                    <p>Shulker boxes provide portable storage solutions that can change how you manage resources:</p>
-                    <h3>Inventory Management</h3>
-                    <p>Optimize your inventory with shulker boxes:</p>
-                    <ul>
-                        <li>Dedicate boxes to specific resource types</li>
-                        <li>Keep emergency supplies in color-coded boxes</li>
-                        <li>Use for quick resource sorting at generator</li>
-                        <li>Store backup gear for when your bed is destroyed</li>
-                    </ul>
-                    <h3>Tactical Applications</h3>
-                    <p>Creative uses for shulker boxes in combat:</p>
-                    <ol>
-                        <li>Create instant cover during bridge fights</li>
-                        <li>Block pathways to slow pursuing enemies</li>
-                        <li>Use as temporary barriers when defending</li>
-                        <li>Store ender pearls for quick getaways</li>
-                    </ol>
-                `,
+    <h2>Shulker Box Tactics for 1.12.2</h2>
+    <p>Shulker boxes are amazing for SMP or Lifesteal servers for carrying lots of gear and resources. In Hypixel BedWars, shulker boxes aren’t available, but you can apply similar ideas using smart inventory management and quick access to blocks and tools.</p>
+    <h3>Inventory Management (SMP/Lifesteal)</h3>
+    <ul>
+        <li>Dedicate boxes to specific resources (blocks, weapons, potions)</li>
+        <li>Keep emergency supplies ready for clutch PvP moments</li>
+        <li>Organize gear for fast swaps during fights</li>
+        <li>Store backup weapons or armor to prepare for extended battles</li>
+    </ul>
+    <h3>Tactical Applications</h3>
+    <ol>
+        <li>Create instant cover using placed shulker boxes or substitute with quick-block placements in BedWars</li>
+        <li>Block pathways or control enemy movement using boxes or temporary barriers</li>
+        <li>Defend objectives by rapidly deploying stored resources</li>
+        <li>Keep escape tools like ender pearls or jump potions ready for quick retreats</li>
+    </ol>
+    <h3>Hypixel BedWars Equivalent</h3>
+    <ul>
+        <li>Use hotbar blocks and items smartly to replicate shulker box flexibility</li>
+        <li>Pre-plan inventory slots for immediate combat or bridging needs</li>
+        <li>Keep a “backup gear” set in your hotbar for when your bed is under attack</li>
+    </ul>
+    <div class="tip">
+        <strong>Pro Tip:</strong> On BedWars, think of each hotbar slot as a mini shulker box—organize for speed and versatility during fights.
+    </div>
+`,
                 // General Strategies
-                'map-awareness': `
-                    <h2>Map Awareness Strategies</h2>
-                    <p>Good map awareness is crucial for success in BedWars:</p>
-                    <h3>Constant Scanning</h3>
-                    <p>Always be aware of your surroundings:</p>
-                    <ul>
-                        <li>Frequently check the scoreboard to see which teams still have beds</li>
-                        <li>Regularly scan the map for enemy movements</li>
-                        <li>Listen for audio cues like block breaking or footsteps</li>
-                    </ul>
-                    <h3>Position Tracking</h3>
-                    <p>Keep track of enemy positions:</p>
-                    <ol>
-                        <li>Note which directions enemies are coming from</li>
-                        <li>Predict where enemies might attack based on their resources</li>
-                        <li>Watch for bridge building toward your base</li>
-                    </ol>
-                    <h3>Resource Awareness</h3>
-                    <p>Be aware of resource control:</p>
-                    <ul>
-                        <li>Note which teams control diamond generators</li>
-                        <li>Keep track of which emerald generators are being contested</li>
-                        <li>Adjust your strategy based on resource availability</li>
-                    </ul>
-                `,
+'map-awareness': `
+    <h2>Map Awareness Strategies</h2>
+    <p>Being aware of your surroundings is key to winning fights and controlling the game, both in Hypixel BedWars and on SMP/Lifesteal servers.</p>
+    <h3>Constant Scanning</h3>
+    <p>Always keep an eye on what’s happening around you:</p>
+    <ul>
+        <li>In BedWars, check the scoreboard to see which teams still have beds. On SMP/Lifesteal, note which players have recently engaged in PvP or are gearing up.</li>
+        <li>Regularly scan the map for enemy movements or players approaching your base.</li>
+        <li>Listen for audio cues like block breaking, footsteps, or TNT placements to anticipate attacks.</li>
+    </ul>
+    <h3>Position Tracking</h3>
+    <p>Know where your enemies are and predict their actions:</p>
+    <ol>
+        <li>Track which directions opponents are coming from on both BedWars islands and SMP/Lifesteal territories.</li>
+        <li>Predict their attack strategies based on the blocks, weapons, or items they have gathered.</li>
+        <li>Watch for bridging or ladder/climbing activity toward your base on SMP/Lifesteal, which is similar to BedWars rushes.</li>
+    </ol>
+    <h3>Resource Awareness</h3>
+    <p>Control over resources can determine the outcome of battles:</p>
+    <ul>
+        <li>On Hypixel BedWars, note which teams control diamonds and emeralds. On SMP/Lifesteal, know who has the best farms, ores, or PvP gear.</li>
+        <li>Adjust your strategy depending on which resources are being contested or which opponents are under-equipped.</li>
+        <li>Use resource awareness to decide when to engage, defend, or retreat.</li>
+    </ul>
+    <div class="tip">
+        <strong>Pro Tip:</strong> Constantly combine observation and prediction. Knowing where enemies are and what they have can make the difference between surviving and getting eliminated.
+    </div>
+`,
                 'resource-mgmt': `
-                    <h2>Resource Management Strategies</h2>
-                    <p>Effective resource management is key to dominating in BedWars:</p>
-                    <h3>Priority Spending</h3>
-                    <p>What to buy first with your resources:</p>
-                    <ul>
-                        <li>Iron: Blocks and tools first, then weapons</li>
-                        <li>Gold: Armor upgrades and healing items</li>
-                        <li>Diamonds: Sharpness and protection enchantments</li>
-                        <li>Emeralds: Obsidian and powerful special items</li>
-                    </ul>
-                    <h3>Efficient Collection</h3>
-                    <p>How to maximize your resource gathering:</p>
-                    <ol>
-                        <li>Time your generator visits to avoid missing resources</li>
-                        <li>Upgrade generators as soon as possible</li>
-                        <li>Control mid-map generators for diamond/emerald advantage</li>
-                        <li>Share resources with teammates based on role needs</li>
-                    </ol>
-                `,
+    <h2>Resource Management Strategies</h2>
+    <p>Knowing how to collect, spend, and prioritize resources is crucial for winning in both Hypixel BedWars and SMP/Lifesteal servers.</p>
+    <h3>Priority Spending</h3>
+    <p>Spend your resources wisely depending on the server type:</p>
+    <ul>
+        <li>Iron: In BedWars, use for blocks and basic tools first; on SMP/Lifesteal, gather iron for early weapons and armor.</li>
+        <li>Gold: Buy armor upgrades and healing items in BedWars; on SMP/Lifesteal, gold can be used for enchanted gear or consumables.</li>
+        <li>Diamonds: Enchant swords/armor and traps in BedWars; on SMP/Lifesteal, prioritize sharpness/protection or potion brewing ingredients.</li>
+        <li>Emeralds: Secure obsidian or some useful items in BedWars; on SMP/Lifesteal, use for high-tier items, special weapons, or trading.</li>
+    </ul>
+    <h3>Efficient Collection</h3>
+    <p>Maximize resource gathering and control:</p>
+    <ol>
+        <li>Time your generator visits in BedWars to avoid missing resources; on SMP/Lifesteal, check farming spots regularly.</li>
+        <li>Upgrade generators early to boost collection speed.</li>
+        <li>Control mid-map diamond/emerald areas in BedWars; on SMP/Lifesteal, control contested ores or mob spawners.</li>
+        <li>Share resources with teammates according to their roles: defenders, rushers, or support players.</li>
+    </ol>
+    <div class="tip">
+        <strong>Pro Tip:</strong> Always plan your spending and collection ahead. On both BedWars and SMP/Lifesteal, smart resource management often wins fights before they even start.
+    </div>
+`,
                 'communication': `
-                    <h2>Communication Tips for BedWars</h2>
-                    <p>Effective communication can make an average team great:</p>
-                    <h3>Essential Callouts</h3>
-                    <p>What information to share with your team:</p>
-                    <ul>
-                        <li>Enemy positions and movements</li>
-                        <li>Generator control status</li>
-                        <li>Resource needs and surpluses</li>
-                        <li>Bed defense status and vulnerabilities</li>
-                    </ul>
-                    <h3>Team Coordination</h3>
-                    <p>Strategies for working together effectively:</p>
-                    <ol>
-                        <li>Assign specific roles to each team member</li>
-                        <li>Coordinate simultaneous attacks from multiple angles</li>
-                        <li>Develop quick communication shorthand</li>
-                        <li>Establish priority targets based on game state</li>
-                    </ol>
-                    <div class="tip">
-                        <strong>Pro Tip:</strong> Use consistent terminology that everyone on your team understands to avoid confusion during intense moments.
-                    </div>
-                `,
+    <h2>Communication Tips for BedWars & SMP/Lifesteal</h2>
+    <p>Clear communication is often the difference between a win and a loss, whether you’re on Hypixel BedWars or an SMP/Lifesteal server.</p>
+    <h3>Essential Callouts</h3>
+    <p>Share key information with your teammates:</p>
+    <ul>
+        <li>Enemy positions and movements near your base or around valuable resources</li>
+        <li>Which generators or farming spots are being contested</li>
+        <li>Resource needs or surpluses for upgrades, armor, or potions</li>
+        <li>Bed defense status in BedWars, or base vulnerabilities on SMP/Lifesteal</li>
+    </ul>
+    <h3>Team Coordination</h3>
+    <p>Work together efficiently:</p>
+    <ol>
+        <li>Assign roles: rushers, defenders, mid control, or resource gatherers</li>
+        <li>Coordinate attacks or defenses simultaneously</li>
+        <li>Create a quick shorthand for common situations (like “bed under attack” or “emeralds open”)</li>
+        <li>Prioritize targets based on current map control and enemy strengths</li>
+    </ol>
+    <div class="tip">
+        <strong>Pro Tip:</strong> Use consistent terms your team understands. On SMP/Lifesteal, you can also ping important mobs, ores, or farms to keep everyone informed.
+    </div>
+`,
                 'bed-defense': `
-                    <h2>Bed Defense Ideas</h2>
-                    <p>Protecting your bed is crucial for long-term success in BedWars:</p>
-                    <h3>Defense Strategies</h3>
-                    <p>Different approaches to bed defense:</p>
-                    <ul>
-                        <li>End stone layers for blast resistance</li>
-                        <li>Wood layers for early game economy</li>
-                        <li>Obby (obsidian) for late game security</li>
-                        <li>Layered defenses with multiple materials</li>
-                    </ul>
-                    <h3>Trap Integration</h3>
-                    <p>How to incorporate traps into your defense:</p>
-                    <ol>
-                        <li>Miner fatigue trap to slow attackers</li>
-                        <li>Alarm trap to detect invisible players</li>
-                        <li>Counter-offensive trap for strength boost</li>
-                        <li>It's a trap! to reveal hidden enemies</li>
-                    </ol>
-                `,
+    <h2>Bed Defense & Base Protection Strategies</h2>
+    <p>Defending your bed in Hypixel BedWars or your base in SMP/Lifesteal is key for long-term survival.</p>
+    <h3>Defense Strategies</h3>
+    <p>Choose materials and layouts depending on the stage of the game:</p>
+    <ul>
+        <li>End Stone layers for early blast resistance (Hypixel BedWars)</li>
+        <li>Wood layers for quick, cheap defenses while gathering resources</li>
+        <li>Obsidian/Strong blocks for late-game invulnerability or SMP/Lifesteal base fortification</li>
+        <li>Layered defenses with multiple materials to confuse or slow attackers</li>
+    </ul>
+    <h3>Trap Integration</h3>
+    <p>Enhance defenses with traps or tactical maneuvers:</p>
+    <ol>
+        <li>Alarm traps to detect sneaky or invisible enemies</li>
+        <li>Counter-offensive setups: drop items or push attackers during a fight</li>
+        <li>Use terrain to your advantage in SMP/Lifesteal bridges, cliffs, and narrow corridors act like traps</li>
+        <li>Fake weak spots to bait enemies into overextending</li>
+    </ol>
+    <div class="tip">
+        <strong>Pro Tip:</strong> Always adapt your defense depending on whether you’re playing BedWars or an SMP/Lifesteal PvP fight. What works for a bed might translate into protecting your main base or vault.
+    </div>
+`,
                 'final-fight': `
-                    <h2>Final Fight Techniques</h2>
-                    <p>When it's down to the final teams, these techniques can help you secure victory:</p>
-                    <h3>Positioning</h3>
-                    <p>Where you fight matters:</p>
-                    <ul>
-                        <li>Try to fight on your terms and your territory</li>
-                        <li>Use high ground for advantage</li>
-                        <li>Create environmental advantages with traps and obstacles</li>
-                    </ul>
-                    <h3>Resource Management</h3>
-                    <p>Make every resource count:</p>
-                    <ol>
-                        <li>Save your best gear for the final fight</li>
-                        <li>Use potions and special items strategically</li>
-                        <li>Make sure you have a backup set of gear</li>
-                    </ol>
-                    <h3>Psychological Warfare</h3>
-                    <p>Get in your opponent's head:</p>
-                    <ul>
-                        <li>Use unexpected tactics to confuse opponents</li>
-                        <li>Feign weakness to lure them into traps</li>
-                        <li>Apply constant pressure to force mistakes</li>
-                    </ul>
-                `
+    <h2>Final Fight Strategies</h2>
+    <p>When the game is down to the last few players or teams, these tactics help secure victory—whether in Hypixel BedWars or SMP/Lifesteal duels.</p>
+    <h3>Positioning & Terrain</h3>
+    <p>Control the battlefield:</p>
+    <ul>
+        <li>Fight on terrain you know and can manipulate (your base or bed area in Hypixel)</li>
+        <li>Take high ground or elevated positions for knockback and visibility advantage</li>
+        <li>Use blocks, walls, or natural features in SMP/Lifesteal to create choke points or obstacles</li>
+    </ul>
+    <h3>Resource & Gear Management</h3>
+    <p>Every item counts in a final showdown:</p>
+    <ol>
+        <li>Reserve your best armor, weapons, and upgrades for endgame fights</li>
+        <li>Use potions, healing items, or ender pearls tactically to gain the upper hand</li>
+        <li>Keep backup items in your inventory or ender chest in SMP/Lifesteal for sustained duels</li>
+    </ol>
+    <h3>Psychological & Tactical Plays</h3>
+    <p>Disrupt your opponent’s decision-making:</p>
+    <ul>
+        <li>Perform fake retreats or bait attacks to lure enemies into traps</li>
+        <li>Pressure them constantly to force mistakes or mispositioning</li>
+        <li>Switch between aggressive and defensive tactics unpredictably</li>
+    </ul>
+    <div class="tip">
+        <strong>Pro Tip:</strong> The final fight isn’t just about gear—map control, mind games, and timing can be the difference between victory and defeat.
+    </div>
+`,
             };
             strategyContent.innerHTML = strategies[strategyId] || '<p>Strategy content not found. Please try another strategy.</p>';
             showModal('strategyModal');
@@ -1684,19 +1230,15 @@
                         <li>All downloads are used at your own risk</li>
                     </ol>`,
                 'privacy': `<h2>Privacy Policy</h2>
-                    <p>We value your privacy. Here's what we collect:</p>
+                    <p>We respect your privacy and want you to feel safe using our website. Here's what we collect:</p>
                     <ul>
-                        <li>Email address for account creation</li>
-                        <li>Username for community features</li>
-                        <li>Download preferences to improve content</li>
+                        <li>Non-personal information like page views, browser type, and device type to improve website performance and content</li>
                     </ul>
                     <p>We never sell your data to third parties.</p>`,
                 'cookies': `<h2>Cookie Policy</h2>
                     <p>We use cookies to:</p>
                     <ul>
-                        <li>Keep you logged in between sessions</li>
-                        <li>Remember your preferences</li>
-                        <li>Analyze site traffic and usage patterns</li>
+                        <li>We respect your privacy. Our website does not collect any personal information, emails, usernames, or cookies</li>
                     </ul>
                     <p>You can disable cookies in your browser settings.</p>`,
                 'disclaimer': `<h2>Disclaimer</h2>
@@ -1707,118 +1249,6 @@
             legalContent.innerHTML = legalTexts[legalType] || '<p>Content not found</p>';
             showModal('legalModal');
         }
-        // Search functionality
-        function searchContent() {
-            const query = document.getElementById('searchInput').value.trim().toLowerCase();
-            if (!query) {
-                showNotification('Please enter something to search for');
-                return;
-            }
-            // Remove any previous highlights
-            removeHighlights();
-            // Define searchable content with keywords
-            const searchKeywords = {
-                // Guides
-                'surviving': { action: 'guide', id: 'first-night', name: 'Surviving Your First Night' },
-                'first night': { action: 'guide', id: 'first-night', name: 'Surviving Your First Night' },
-                'crafting': { action: 'guide', id: 'crafting', name: 'Complete Crafting Guide' },
-                'ender dragon': { action: 'guide', id: 'ender-dragon', name: 'Ender Dragon Battle' },
-                'dragon': { action: 'guide', id: 'ender-dragon', name: 'Ender Dragon Battle' },
-                // BedWars Strategies
-                                'rushing': { action: 'strategy', id: '189rush', name: 'Rushing Strategies' },
-                'rush': { action: 'strategy', id: '189rush', name: 'Rushing Strategies' },
-                'resource': { action: 'strategy', id: '189resource', name: 'Resource Collection' },
-                'pvp': { action: 'strategy', id: '189pvp', name: 'PvP Techniques' },
-                'bridge': { action: 'strategy', id: '189bridge', name: 'Bridge Fighting' },
-                'defense': { action: 'strategy', id: '189defense', name: 'Defensive Tactics' },
-                'defensive': { action: 'strategy', id: '189defense', name: 'Defensive Tactics' },
-                'netherite': { action: 'strategy', id: '1165netherite', name: 'Netherite Strategies' },
-                'crossbow': { action: 'strategy', id: '1165crossbow', name: 'Crossbow Tactics' },
-                'bastion': { action: 'strategy', id: '1165bastion', name: 'Bastion Loot' },
-                'team': { action: 'strategy', id: '1165team', name: 'Team Coordination' },
-                'off-hand': { action: 'strategy', id: '1122offhand', name: 'Off-hand Strategies' },
-                'sweeping': { action: 'strategy', id: '1122sweeping', name: 'Sweeping Edge' },
-                'totem': { action: 'strategy', id: '1122totem', name: 'Totem of Undying' },
-                'elytra': { action: 'strategy', id: '1122elytra', name: 'Elytra Maneuvers' },
-                'shulker': { action: 'strategy', id: '1122shulker', name: 'Shulker Box Tactics' },
-                'map': { action: 'strategy', id: 'map-awareness', name: 'Map Awareness' },
-                'communication': { action: 'strategy', id: 'communication', name: 'Communication Tips' },
-                'bed defense': { action: 'strategy', id: 'bed-defense', name: 'Bed Defense Ideas' },
-                'final': { action: 'strategy', id: 'final-fight', name: 'Final Fight Techniques' },
-                // Texture Packs
-                'texture': { action: 'section', id: 'packs', name: 'Texture Packs' },
-                'pack': { action: 'section', id: 'packs', name: 'Texture Packs' },
-                'faithful': { action: 'pack', id: 'faithful32x', name: 'Faithful 32x' },
-                'default': { action: 'pack', id: 'defaultedit', name: 'Default Edit' },
-                'lunar': { action: 'pack', id: 'lunar', name: 'Lunar Pack' },
-                'soartex': { action: 'pack', id: 'soartex', name: 'Soartex Fanver' },
-                'bdcraft': { action: 'pack', id: 'bdcraft', name: 'BDcraft' },
-                'ramye': { action: 'pack', id: 'ramye', name: 'Ramye 16x' },
-                // Mods
-                'mod': { action: 'section', id: 'mods', name: 'Mods' },
-                'optifine': { action: 'mod', id: 'optifine', name: 'OptiFine' },
-                'biomes': { action: 'mod', id: 'biomesoplenty', name: 'Biomes O\' Plenty' },
-                'create': { action: 'mod', id: 'create', name: 'Create Mod' },
-                'reverie': { action: 'mod', id: 'reverie', name: 'Reverie Shader' },
-                // Community
-                'community': { action: 'section', id: 'community', name: 'Community' },
-                'discord': { action: 'community', id: 'discord', name: 'Discord Server' },
-                'forum': { action: 'community', id: 'forum', name: 'Forums' },
-                'gallery': { action: 'community', id: 'gallery', name: 'Gallery' }
-            };
-            // Find matching content
-            let foundMatch = null;
-            for (const [keyword, content] of Object.entries(searchKeywords)) {
-                if (query.includes(keyword)) {
-                    foundMatch = content;
-                    break;
-                }
-            }
-            // Show results
-            if (foundMatch) {
-                showNotification(`Found: ${foundMatch.name}`);
-                // Navigate to appropriate section and show content
-                setTimeout(() => {
-                    if (foundMatch.action === 'guide') {
-                        document.getElementById('guides').scrollIntoView({ behavior: 'smooth' });
-                        setTimeout(() => { showGuide(foundMatch.id); }, 500);
-                    } 
-                    else if (foundMatch.action === 'strategy') {
-                        document.getElementById('bedwars').scrollIntoView({ behavior: 'smooth' });
-                        setTimeout(() => { showStrategy(foundMatch.id); }, 500);
-                    }
-                    else if (foundMatch.action === 'section') {
-                        document.getElementById(foundMatch.id).scrollIntoView({ behavior: 'smooth' });
-                    }
-                    else if (foundMatch.action === 'pack') {
-                        document.getElementById('packs').scrollIntoView({ behavior: 'smooth' });
-                    }
-                    else if (foundMatch.action === 'mod') {
-                        document.getElementById('mods').scrollIntoView({ behavior: 'smooth' });
-                    }
-                    else if (foundMatch.action === 'community') {
-                        document.getElementById('community').scrollIntoView({ behavior: 'smooth' });
-                    }
-                }, 1000);
-            } else {
-                showNotification('No results found for: ' + query);
-            }
-        }
-        // Helper function to remove highlights from previous searches
-        function removeHighlights() {
-            const highlights = document.querySelectorAll('.search-highlight');
-            highlights.forEach(el => {
-                const parent = el.parentNode;
-                parent.replaceChild(document.createTextNode(el.textContent), el);
-                parent.normalize();
-            });
-        }
-        // Add event listener for Enter key in search input
-        document.getElementById('searchInput').addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                searchContent();
-            }
-        });
         // Notification system
         function showNotification(message) {
             const notification = document.getElementById('notification');
@@ -1839,16 +1269,6 @@
                     // Add active class to clicked button
                     btn.classList.add('active');
                     // Add event listener for Enter key in search input
-                    const searchInput = document.getElementById('searchInput');
-                    if (searchInput) {
-                        searchInput.addEventListener('keypress', function(e) {
-                            if (e.key === 'Enter') {
-                                searchContent();
-                            }
-                        });
-                    }
-                    // Here you would show the corresponding tab content
-                    // For this example, we're just demonstrating the UI
                     showNotification('Showing ' + btn.dataset.tab + ' guides');
                 });
             });
@@ -1870,9 +1290,8 @@
                 });
             });
         });
-    </script>
-</body>
-</html>
+    </script></body></html>
+
 
 
 
